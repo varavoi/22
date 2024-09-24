@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Заказ еды</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/sliderBanner.css">
+        <link rel="stylesheet" href="CSS/demo.css">
+        <link rel="stylesheet" type="text/css" href="CSS/demo.css" media="all" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Victor+Mono:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:wght@500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Victor+Mono:wght@200&display=swap" rel="stylesheet">
+
+        <link href="https://myfonts.ru/myfonts?fonts=vokiar" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css " rel="stylesheet">
+       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="JS/SliderScriptBanner.js"></script>
+        
+       
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+        <link rel="stylesheet" href="CSS/Slider2_Style.css">
+        <script src="JS/Slider2/Slider2_fslightbox.js"></script>
+         
+        
+
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class="outerAlignLayer_Row">
+                    <!--Кнопка меню-->
+                    
+                    <a href="#" class="header_menuButton">
+                        <img src="IMG/DesktopHeaderElems/MenuIco.png" alt="" class="menuButIco">
+                        <p class="menuButText">Меню</p>
+                    </a>
+                <!--Конец Кнопка меню-->
+                <!--Выбор города-->
+                    
+                        <nav class="cityGeo">
+                            <ul class="dropdown">
+                                <li class="dropdown-top">
+                                                  
+                                <a class="dropdown-top cityGeo_CityName" href="#">
+                                    <img src="IMG/DesktopHeaderElems/CityGeoICO.png" alt="" class="cityGeo_Ico">        
+                                    Санкт-Петербург
+                                    <img src="IMG/DesktopHeaderElems/CityChoiceIco.png" alt="" class="cityGeo_CityChoice"></a>                      
+                                <ul class="dropdown-inside">
+                                    <li><a href="/"><p class="cityGeo_CityName">Москва</p>
+                                    </a></li>
+                                <li><a href="/"><p class="cityGeo_CityName">Сочи</p>
+                                    </a></li>
+                                <li><a href="/"><p class="cityGeo_CityName">Рязань</p>
+                                    </a></li>
+                                </ul>                      
+                                </li>
+                            </ul>
+                            </nav>
+                   
+                <!--Конец Выбор города-->
+                 <!--Логотип и слоган-->
+                    <div class="logoLayer">
+                        <a href="#"><p class="logo">TASTE</p></a>
+                        <p class="slogan">Невероятно вкусная еда</p>
+                    </div>
+                <!--Конец Логотип и слоган-->
+                <!--Правый блок-->
+                    <nav class="IcoLogBask_Items">
+                        <ul>
+                            <li class="searchIcoBut">
+                                <a href="#"><img src="IMG/DesktopHeaderElems/SearchIco.png" alt="" class="searchIco"></a>
+                            </li>
+                            <li class="LoginIcoBut">
+                                <a href="#"> <img src="IMG/DesktopHeaderElems/LoginIco.png" alt="" class="LoginIco"></a>
+                            </li>
+                            <li>
+                                <div class="BasketItems">
+                                    <a href="#"><img src="IMG/DesktopHeaderElems/BasketItemsIco.png" alt="" class="basketIco"></a>
+                                    <p class="basketGoodsCount">0</p>
+                                    <p class="basketMoneyChange">Р</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--Конец Правый блок-->
+                </div>
+            </div>
+        </header>
+        <main>
+           <section class="Section1_Sushi">
+            <div class="wrapper">
+                <div class="impCaption"><h2 class="section_zag2">Роллы и суши<a class="CaptionChoiceLink" href="#"><span class="CaptionChoice">65 блюд</span></a></h2></div>
+            
+            <div class="captionItemsAlign">
+                <nav class="captionItemsAlign_Row">
+                    <ul>
+                        <li class="captionItemsAlign_Button Button_visited FirstButton"><a class="TextMenuLink" href="#">Все блюда</a></li>
+                        <li class="captionItemsAlign_Button AfterFirstButton"><a class="TextMenuLink" href="#">Роллы</a></li>
+                        <li class="captionItemsAlign_Button AfterFirstButton"><a class="TextMenuLink" href="#">Суши</a></li>
+                        <li class="captionItemsAlign_Button AfterFirstButton"><a class="TextMenuLink" href="#">Запеченные роллы</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </section>
+        <section class="bodyGoodsSection_ForFlex">
+            <div class="wrapper">
+            <div class="GoodsCardsSection_ColumnAlign">
+            <div class="FlexGoodsCardsSection_RowAlign">
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+            </div>
+            <div class="FlexGoodsCardsSection_RowAlign">
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+            </div>
+            <div class="FlexGoodsCardsSection_RowAlign">
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+            </div>
+            <div class="FlexGoodsCardsSection_RowAlign">
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                        <a href="#"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_addKart"></a>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <a href=""> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_deleteKart"></a>
+                    </div>
+                    <div class="goodsCard_Bottom">
+                        <a href="#" class="goodsCard_ProductName_Trigger"><p class="goodsCard_ProductName">Пицца ПЕППЕРОНИ</p></a>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">820</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <a href="#"><img src="IMG/GoodsCardItem/basketGoods.png" alt="" class="goodsBasketIco"></a>
+                        </div>
+                    </div>
+                    <div class="goodsCardDeteilInformBottom">
+                        <p class="goodsCardDeteilInformBottom_Text">0.280 кг</p>
+                        <p class="goodsCardDeteilInformBottom_Text">Сливочный сыр, авокадо, лосось, нори, рис, микрозелень лук, соус Унаги, огурец</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        </main>
+
+        <footer>
+            <div class="decorative_line"></div>
+            <div class="wrapper">
+                    <div class="footerBlock" id="fB1">
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Сделать заказ</h3>
+                            <p class="footerBlock_informText">+7 (812) 458-2-274</p>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Режим работы</h3>
+                            <p class="footerBlock_informText">Сейчас работаем</p>
+                            <p class="footerBlock_usualText">Пн-Вс: 10:00 - 05:00</p>
+                        </div>
+                        <div class="footerBlockSection">
+                        </div>
+                        <div class="footerBlockSection">
+                            <a href="#"><img src="IMG/DesktopFooterElems/VK_ICO.png" alt="" class="footer_SocSiteIco"></a>
+                        </div>
+                    </div>
+                    <div class="footerBlock" id="fB2">
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">О TASTE</h3>
+                            <a href="#" class="footerMenu_Button">Акции</a>
+                            <a href="#" class="footerMenu_Button">Программа балов</a>
+                            <a href="#" class="footerMenu_Button">Франшиза с нами</a>
+                            <a href="#" class="footerMenu_Button">Связаться с нами</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Карьера</h3>
+                            <a href="#" class="footerMenu_Button">Вакансии</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">ПРАВОВАЯ ИНФОРМАЦИЯ</h3>
+                            <a href="#" class="footerMenu_Button">Соглашение об условии доставки</a>
+                            <a href="#" class="footerMenu_Button">Политика обработки персональных данных</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <a href="#"><img src="IMG/DesktopFooterElems/AppstoreDown_Ico.png" alt="" class="footer_UploadIco"></a>
+                            <a href="#"><img src="IMG/DesktopFooterElems/AppstoreDown_Ico.png" alt="" class="footer_UploadIco"></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="decorative_line">
+                <p class="copyrightText">@copyright by Avoian 2023. All rights protected.</p>
+            </div>
+        </footer>
+        <script src="JS/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+/*Задание 1
+Напишите код, выполнив задание из каждого пункта отдельной строкой:
+- Создайте пустой объект user.
+- Добавьте свойство name со значением John.
+- Добавьте свойство surname со значением Smith.
+- Измените значение свойства name на Pete.
+- Добавить еще несколько свойств user
+- Удалите свойство name из объекта.
+- Создайте функцию, которая выводит все свойства объекта user  и их значение*/
+//Решение
+/*let user ={}
+user.name="John"
+user.surname="Smith"
+user.name="Pete"
+user.age=18
+user.height="180sm"
+user.address="st. Sadovaya, h. 18, app. 45"
+user.profession="doctor"
+delete user.name
+
+function showInfo(obj){
+  let info = "Данные пользователя:\n"
+  for(let key in obj){
+    info +=`${key} : ${obj[key]}\n`
+  }
+  alert(info);
+}
+showInfo(user)*/
+/*
+* Задание 2
+Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+Должно работать так:
+let schedule = {};
+
+alert( isEmpty(schedule) ); // true
+
+schedule["8:30"] = "get up";
+
+alert( isEmpty(schedule) ); // false*/
+//Решение
+/*let schedule = {};
+function isEmpty(obj){
+  for(let key in obj){
+    return false;
+  }
+  return true;
+}
+console.log(isEmpty(schedule))
+schedule["8:30"] = "get up";
+console.log(isEmpty(schedule))*/
+
+/*
+3. У нас есть объект, в котором хранятся зарплаты нашей команды:
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+Если объект salaries пуст, то результат должен быть 0.*/
+//Решение
+/*let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+}
+function isEmpty(object){
+  for(key in object){
+    return false;
+  }
+  return true;
+}
+
+function countSum(salaries){
+  let sum=0;
+  let text='Сумма зарплат';
+  if(isEmpty(salaries)){ sum=0; }
+  else{
+    text +="\n"
+    for(let key in salaries){
+        text += key +', '
+        sum +=Number(salaries[key])
+       }
+    text = text.slice(0, -2)
+     }
+  return `${text} = ${sum}`;
+}
+alert(countSum(salaries));*/

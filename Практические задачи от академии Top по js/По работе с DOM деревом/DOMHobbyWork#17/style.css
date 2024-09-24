@@ -1,0 +1,40 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.calcBgd{
+    background-color: #e8f9dd;
+    padding: 20px 40px;
+}
+.text{
+    font-size: 25px;
+    padding: 10px;
+}
+.numBut{
+    padding: 20px;
+    background-color: aqua;
+    font-size: 25px;
+    border: none;
+}
+.numBut:hover{
+    cursor: pointer;
+    background-color: rgb(212, 255, 255);
+}
+.numBut:active{
+    cursor: pointer;
+    background-color: rgb(48, 163, 163);
+}
+.equal{
+    grid-column: span 2;
+}
+.numbBlock{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,1902 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Victor+Mono:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:wght@500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Victor+Mono:wght@200&display=swap');
+
+/*@import url(https://myfonts.ru/myfonts?fonts=vokiar);*/
+/*Шапка*/
+*{
+	text-decoration: none;
+}
+*:hover{
+	text-decoration: none;
+}
+body{
+    margin: 0 auto;
+}
+
+/*Хэдер(шапка)*/
+header{
+	padding: 10px 0;
+	border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+}
+
+.wrapper {
+	width: 95%;
+    margin: auto;
+}
+.outerAlignLayer_Row {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+	align-items: center;
+}
+.outerAlignLayer_MobileVersion{
+	display: none;
+}
+.header_menuButton {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+	text-align: center;
+	min-width: 150px;
+	width: 10%;
+	height: 70px;
+	border-radius: 15px;
+	background: #4D4D4D;
+	align-self: center;
+}
+.header_menuButton:hover{
+	background: #8f8e8e;
+}
+.menuButIco {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	flex-shrink: 0;
+	align-self:center;
+}
+.menuButText {
+	display: inline-block;
+	color: #FFF;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	align-self:center;
+}
+.wrapper_item{
+	border-radius: 15px;
+}
+/*Выпадающее меню*/
+ul.dropdown li { position: relative; }
+
+.dropdown{
+	margin-top: 0%;
+	list-style-type: none;
+}
+ ul.dropdown,
+ ul.dropdown-inside {
+ list-style-type: none;
+ padding: 0;  
+
+ }
+
+ ul.dropdown-inside {
+ position: absolute;
+ left: -9999px;  /*для скрытия выпадающего меню*/     
+ transition: transform 5s ease-out 5s;
+ }
+
+ ul.dropdown li.dropdown-top:hover .dropdown-inside {
+    display: block;
+    left: 0;     
+	z-index: 100;
+	list-style-type: none;
+	transform: scale(1.2);
+    }
+
+ ul.dropdown li.dropdown-top {
+ display: block;
+ /*float: left;*/
+ margin: 0 1px 0 0; 
+ font-size: 17px;
+ z-index: 100;
+ }
+ ul.dropdown li.dropdown-top a { 
+ padding: 3px 10px 4px;
+ display: block;
+ text-align: center;
+ width: 328px;
+	height: 50px;
+	border-radius: 15px;
+	border: 2px solid #BFCCB8;
+	background: #BFCCB8;	
+	align-self: center;
+	z-index: 100;
+ }
+ ul.dropdown a.dropdown-top { background: #11ffee00;
+margin: 0 15px;	border-radius: 10%; }
+ ul.dropdown a.dropdown-top:hover { padding: 2px 10px 5px; } 
+ 
+
+ ul.dropdown .dropdown-inside { background: #BFCCB8; 
+	margin: 0 15px;	border-radius: 15px;opacity: 90%;
+} 
+ ul.dropdown .dropdown-inside a:hover { background: #efefef;
+	
+	border-radius: 0%;}
+ /*Окончание выпадающего меню*/
+.cityGeo {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+	min-width: 240px;
+	width: 20%;
+	height: 70px;
+	border-radius: 15px;
+	border: 2px solid #BFCCB8;
+	background: #BFCCB8;	
+	align-self: center;
+}
+.cityGeo:hover{
+	background-color: #e8f8e0;
+	cursor: pointer;
+}
+.cityGeo:active{
+	transform: scale(0.97);
+	cursor: pointer;
+}
+.cityGeo_Ico {
+	display: inline-block;
+	width: 25px;
+	height: 30px;
+	flex-shrink: 0;
+	align-self:center;
+}
+.cityGeo_CityName {
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	align-self:center;
+	text-align: center;
+}
+.cityGeo_CityChoice {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	align-self:center;
+}
+
+.accountButton{
+	border: none;
+	padding: 20px;
+	border-radius: 50px;
+	background-color: #BFCCB8;
+	height: 15%;
+}
+.accountButton:hover{
+	background-color: #e8f8e0;
+	cursor: pointer;
+}
+.accountButton:active{
+	transform: scale(0.97);
+	cursor: pointer;
+}
+
+.searchButton{
+	border: none;
+	padding: 20px;
+	border-radius: 50px;
+	background-color: #BFCCB8;
+	height: 15%;
+}
+.searchButton:hover{
+	background-color: #e8f8e0;
+	cursor: pointer;
+}
+.searchButton:active{
+	transform: scale(0.97);
+	cursor: pointer;
+}
+
+.logoLayer {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+	width: 30%;
+	align-self: center;
+}
+.logoLayer:hover, .logoLayer_Mobile:hover{
+	text-decoration: none;
+}
+.logo {
+	color: #BFCCB8;
+	font-family: 'mr_Vokiar';
+	font-size: 70px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: center;
+	text-decoration: none;
+}
+.logo:hover{
+text-decoration: none;
+}
+.logoLink{
+	text-decoration: none;
+	outline: none !important;
+}
+.logoLink:hover{
+	text-decoration: none;
+	outline: none !important;
+}
+.slogan {
+	color: #4D4D4D;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	text-align: center;
+}
+.IcoLogBask_Items {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 30%;
+	align-self: center;
+	text-align: right;
+}
+
+.IcoLogBask_Items li{
+	display: inline-block;
+    list-style: none;
+	margin: 0 10px;
+}
+.searchIco {
+	width: 15%;
+	min-width: 30px;
+	min-height: 30px;
+	flex-shrink: 0;
+	align-self: center;
+}
+.LoginIco {
+	width: 10%;
+	min-width: 30px;
+	min-height: 30px;
+	flex-shrink: 0;
+	align-self: center;
+}
+.BasketItems {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	align-items: center;
+    justify-content: space-evenly;
+	width: 130px;
+	height: 70px;
+	flex-shrink: 0;
+	border-radius: 15px;
+	background: #BFCCB8;
+	align-self: center;
+}
+
+.BasketItems:hover{
+	background-color: #e8f8e0;
+	cursor: pointer;
+}
+.BasketItems:active{
+	transform: scale(0.97);
+	cursor: pointer;
+}
+.BasketItems a{
+	align-self: center;
+}
+.BasketItems:hover{
+	cursor: pointer;
+	text-decoration: none;
+	outline: none !important;
+}
+.basketIco {
+	width: 30px;
+	height: 30px;
+}
+.basketGoodsCount {
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	align-self: center;
+	text-decoration: none;
+}
+.basketGoodsCount:hover{
+	text-decoration: none;
+}
+.basketMoneyChange {
+	color: #000;
+	font-family: Open Sans;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-decoration-line: strikethrough;
+	align-self: center;
+}
+/*Конец хэдера(шапки)*/
+/*Футер(подвал)*/
+footer{
+	height: 669px;
+	/*border: #000 1px solid;*/
+}
+.footer_mobile{display: none;}
+footer .wrapper{
+	height: 90%;
+	display: block;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: start;
+}
+#fB1{
+	padding-top: 3%;
+}
+#fB2{
+	padding-top: 10%;
+}
+
+.decorative_line{
+	height: 5%;
+	background: #DDD;
+}
+.footerBlock {
+	height: 15%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin: 5px 0;
+	padding: 0px 25px;
+	min-width: 1260px;
+}	
+	
+.footerBlockSection {
+	display: block;
+	width: 40%;
+	padding: 0 20px;
+}
+.footerBlockSection:last-child{
+	text-align: right;
+}
+
+.footerBlock_caption {
+	display: block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	margin-bottom: 32px;
+}
+.footerBlock_usualText{
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.footerBlock_informText {
+	display: block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.footerMenu_Button {
+	display: block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.copyrightText{
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+/*Конец Футер(подвал)*/
+
+/*секция 1*/
+
+/*
+.Slider_section_2 .wrapper{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}*/
+
+/*Блок 4 Карта*/
+.section_zag{
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 179px;
+    margin-left: 3.5%;
+}
+.ContactsMap_section_4 {
+	padding: 40px 0;
+	width: 100%;
+	background: #FAF9F8;
+}
+.addresAlignBlock_mobile{
+	display: none;
+}
+.addresAlignBlock {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+.addresTextBlock {
+	/*display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;*/
+	display: block;
+	width: 50%;
+	text-align: left;
+	padding-left: 5%;
+	margin-right: 5%;
+	align-items: center;
+	
+}
+.addresMainPhrase {
+	color: #000;
+	font-family: 'Roboto';
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-right: 2%;
+}
+.addresHighlightPrase {
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	margin-right: 2%;
+	vertical-align: middle;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+.addresUsualPhrase {
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	vertical-align: middle;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+.mapTextIco{
+	width: 40px;
+	height: 40px;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+.mapPlace {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	width: 45%;
+	position: relative;
+}
+.mapKarta {
+	border-radius: 15px;
+	background: rgba(217, 217, 217, 0.70);
+	filter: blur(0.8px) grayscale(80%);
+}
+.mapButton{
+	width: 225px;
+	height: 50px;
+	flex-shrink: 0;
+	border-radius: 15px;
+	border: 2px solid #4D4D4D;
+	background: #4D4D4D;
+	color: #FFF;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	position: absolute;
+	bottom: 20%;
+	left:30%;
+}
+.mapKarta:hover{
+	filter: none;
+}
+
+
+/*Конец блока 4*/
+
+/*Блок 3 Меню*/
+.Menu_section_3 {
+	padding: 0px;
+}
+.wrapper {
+}
+
+.alignMenuItems {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.MenuPoint {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	width: 20%;
+	
+}
+.MenuPointItem {
+	display: block;
+	padding: 15px 5px;
+	cursor: pointer;
+}
+.MenuPointItem:hover{
+	text-decoration: none;
+	background-color: #c9b8b8;
+	border-radius: 5px;
+}
+.MenuPointItem_Text {
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.MenuPointItem_Text:hover{
+	text-decoration: none;
+	
+}
+.MenuRightItemsAlign {
+	display: block;
+	width: 30%;
+	border-left: 1px solid #CCCCCC;
+}
+.MenuRightItemsAlign_Top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+}
+.MenuRightItemsAlign_Bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	margin-top: 50px;
+}
+.MenuRightItemsTip {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.MenuRightItem_Ico {
+	display: block;
+	width: 100px;
+	height: 100px;
+	flex-shrink: 0;
+	align-self: center;
+}
+.MenuRightItem_Text {
+	display: block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	text-align: center;
+}
+/*Конец блока 3*/
+
+
+ /*страница суши*/
+
+ .Section1_Sushi{
+	min-width: 325px;
+ }
+ .impCaption{
+	display: block;
+	width:100%;
+	margin-top: 60px;
+ }
+ .section_zag2{
+	display: inline-block;
+	width: 100%;
+	color: #000;
+    font-family: 'Roboto';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+	text-align: left;
+	align-self: center;
+	margin-top: 0;
+	margin-bottom: 0;
+ }
+ .CaptionChoice{
+	display: inline-block;
+	width: 30%;
+	color: #9F9F9F;
+	font-family: Roboto;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	align-self: center;
+	text-align: left;
+	padding-left: 20px;
+ }
+ .CaptionChoiceLink{
+
+ }
+.captionItemsAlign{
+	display: block;
+	width:100%;
+	margin-top: 37px;
+	min-width: 823px;
+}
+.captionItemsAlign_Row ul{
+	
+}
+.FirstButton{
+	margin-right:6%;
+}
+.AfterFirstButton{
+	margin-right:0%;
+	padding: 15px 20px;
+}
+.AfterFirstButton:hover{
+	border-radius: 15px;
+	background: #9e9393;
+}
+.AfterFirstButton:hover .TextMenuLink{
+	color: white;
+}
+.captionItemsAlign_Button{
+	display: inline-block;
+	/*width: 25%;*/
+	align-items: center;
+	background: #FFF;
+	
+}
+.TextMenuLink{
+	color: #4B3434;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.TextMenuLink:hover{
+	text-decoration: none;
+}
+.Button_visited{
+	border-radius: 15px;
+	background: #4D4D4D;
+	padding: 15px 20px;
+}
+.Button_visited .TextMenuLink{
+	color: white;
+}
+
+.goodsBasketIco{
+	width: 39.8px;
+	height: 38.76px;
+}
+
+
+.gallery {
+    position: relative;
+    width: 100%;
+}
+.goodsCard_Top {
+    display: block;
+    overflow: hidden;
+    /*width: 294px;*/
+    width: 100%;
+    height: 170px;
+    border-radius: 15px;
+    position: relative;
+}
+.NovinkiSection_Capture{
+	position: absolute;
+	bottom: 7%;
+	left: 10%;
+	color: #FFF;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+
+.bodyGoodsSection_ForFlex{
+	padding-top: 50px;
+}
+.GoodsCardsSection_ColumnAlign{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+.FlexGoodsCardsSection_RowAlign{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+}
+/*
+.goodsCardDeteilInformBottom{
+	display: none;
+	/*display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+}
+.goodsCard_ProductName_Trigger:hover{
+	background-color: rgb(187, 187, 223);
+	opacity: 50%;
+	border-radius: 5px;
+}
+.goodsCardDeteilInformBottom2{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+}*/
+.goodsCardDeteilInformBottom{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+}
+.goodsCardDeteilInformBottom_Text{
+	color: #BABABA;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+ /*конец страница суши*/
+
+ /*Пагинация*/
+
+ .pagination_section {
+	margin:30px 5px;
+}
+.pagination_block {
+	display: block;
+	margin:auto;
+	text-align: center;
+}
+.pagination_block_mobile{
+	display:none;
+}
+.pageItem {
+	display: inline-block;
+	margin: 0px 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	background-color:  #A3A3A3;
+}
+.pageItem:hover{
+	text-decoration: none;
+	/*filter: brightness(70%);*/
+	background: #716b6b;
+}
+.pageItemText{
+	color: #FFF;
+	text-align: center;
+	font-family: 'Open Sans';
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.pageDots {
+	display: inline-block;
+	margin: 0px 10px;
+	color: #BFCCB8;
+	text-align: center;
+	font-family: 'Open Sans';
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 9px;
+}
+ /*конец Пагинация*/
+ @media screen and (max-width:1150px) {
+	/*header*/
+	.outerAlignLayer_Row{
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		min-width:769px;
+		align-items: center;
+	}
+	.header_menuButton {
+		order: 1;
+		width: 25%;
+		height: 50px;
+	}
+	.menuButIco {	}
+	.menuButText {	}
+	.cityGeo {
+		order: 2;
+		width: 25%;
+		height: 50px;
+	}
+	.cityGeo_Ico {	}
+	.cityGeo_CityName {	}
+	.cityGeo_CityChoice {	}
+	
+	.logoLayer {
+		order: 0;
+		width: 100%;
+	}
+	.logo {	}
+	.slogan {	}
+	.IcoLogBask_Items {
+		order: 4;
+		display: block;
+		min-width: 260px;
+		width:20%;
+	}
+	
+	.IcoLogBask_Items li{	}
+	.searchIco {	}
+	.LoginIco {	}
+	.BasketItems {
+		height: 50px;
+	}
+	.BasketItems a{	}
+	.basketIco {	}
+	.basketGoodsCount {	}
+	.basketMoneyChange {	}
+	/*конец header*/
+/*Футер(подвал)*/
+footer{
+	height: 100%;
+	/*border: #000 1px solid;*/
+	min-width: 800px;
+}
+footer .wrapper{
+	height: 90%;
+	display: block;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: start;
+	position: relative;
+}
+#fB1{
+	padding-top: 3%;
+}
+#fB2{
+	padding-top: 13%;
+}
+
+.decorative_line{
+	width: 100%;
+}
+.footerBlock {
+	height: 10%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin: 0px;
+	padding: 0px;
+	min-width: 840px;
+	text-align: center;
+}	
+	
+.footerBlockSection {
+	display: inline-block;
+	width: 100%;
+	padding: 0;
+	align-items: center;
+}
+.footerBlockSection:last-child{
+	text-align: right;
+}
+
+.footerBlock_caption {
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	padding-right: 2%;
+	vertical-align: middle;
+}
+.footerBlock_usualText{
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.footerBlock_informText {
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+	padding-right: 2%;
+}
+
+.footerMenu_Button {
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	padding: 5px 5px;
+	margin: 0 5px;
+	border:1px solid #998a8a;
+	border-radius: 5px;
+	width: 200px;
+	height: auto;
+	vertical-align: middle;
+}
+.footerMenu_Button:hover{
+	text-decoration: none;
+	background: #9a8686;
+	color: #fff;
+}
+.copyrightText{
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.icoVk{
+	position: absolute;
+	bottom: 5%;
+	left: 25%;
+}
+.icoUpload1{
+	position: absolute;
+	bottom: 5%;
+	left: 40%;
+}
+.icoUpload2{
+	position: absolute;
+	bottom: 5%;
+	left: 65%;
+}
+#PravInf_SecButt{
+	width: 30%;
+}
+#TASTEFirstButton{
+	width: 10%;
+}
+/*Конец Футер(подвал)*/
+.captionItemsAlign{
+	min-width: 100px;
+}
+
+/*Конец блока 3*/
+
+ }
+
+ @media screen and (max-width:768px) {
+	/*header*/
+	.outerAlignLayer_Row{
+		display:none;
+	}
+	.outerAlignLayer_MobileVersion{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.logoLayer_Mobile{
+		display: block;
+		height: 10%;
+	}
+	.logo_Mobile{
+		color: #BFCCB8;
+		font-family: mr_Vokiar;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	.slogan_Mobile{
+		color: #4D4D4D;
+		font-family: Open Sans;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+	}
+	.MenuCityLoginBlock_Mobile{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		width: 280px;
+		height: 42px;
+		border-radius: 10px;
+		border: 1px solid rgba(77, 77, 77, 0.20);
+		background: #FFF;
+		align-items: center;
+		margin: auto;
+		margin-bottom: 5%;
+	}
+	.header_menuButton_Mobile{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 43px;
+		height: 42px;
+		flex-shrink: 0;
+		border-radius: 10px 0px 0px 10px;
+		background: #4D4D4D;
+	}
+	.menuButIco_Mobile{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+	}
+
+
+
+	.menuButText_Mobile{
+		color: #000;
+		font-family: 'Open Sans';
+		font-size: 16.968px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	/*Города, выпадающий список*/
+
+	.cityGeo_Mobile{
+		width: 197px;
+		height: 42px;
+		border: 1px solid rgba(77, 77, 77, 0.20);
+		background: #FFF;
+	}
+	
+	.cityGeo_CityName_Mobile{
+		text-align: center;
+		color: #000;
+		font-family: Open Sans;
+		font-size: 16.968px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	/*Окончание Города, выпадающий список*/
+	.LoginIcoBut_Mobile{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 42px;
+		height: 42px;
+		flex-shrink: 0;
+		border-radius: 0px 10px 10px 0px;
+		background: #4D4D4D;
+		
+	}
+	.LoginIco_Mobile{
+		filter:invert(100%);
+	}
+	.searchBlock_Mobile{
+		margin: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 280px;
+		height: 42px;
+		flex-shrink: 0;
+		border-radius: 10px;
+		border: 1px solid rgba(0, 0, 0, 0.10);
+		background: rgba(204, 190, 184, 0.20);
+		padding-left: 2%;
+		padding-right: 2%;
+		margin-bottom: 5%;
+	}
+	.searchArea_Mobile{
+		width: 80%;
+		height:70%;
+		border: 0;
+		background: none;
+	}
+	.searchArea_Mobile:focus{
+		border: 1px solid #fff;
+	}
+	.searchIco_Mobile{
+
+	}
+	/*конец header*/
+/*Футер(подвал)*/
+footer{
+	display: block;
+	width:100%;
+	height: auto;
+	/*border: #000 1px solid;*/
+	min-width: 324px;
+}
+footer .wrapper_item{
+	display: block;
+}
+.footerBlock, #fB1, .decorative_line{
+	display: none;
+}
+.footer_mobile {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	margin: auto;
+	text-align: center;
+	width: 95%;
+}
+.decorative_line_mobile {
+	display: block;
+	width: 100%;
+	height: 30px;
+	flex-shrink: 0;
+	background-color: #c5bdbd;
+	
+}
+.footerBlockSection_Mobile {
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: space-between;
+margin: 10px 0;
+align-items: center;
+}
+.informTextFooter_Mobile {
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+}
+.attractInformFooter_Mobile {
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.textButtonFooter_Mobile {
+	color: #000;
+ 	text-align: center;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	margin: 5px 0px;
+	
+}
+.textButtonFooter_Mobile:hover{
+	text-decoration: none;
+	background-color: #958b8b;
+	color: white;
+}
+.informTextFooter_Mobile_notBold {
+	color: #000;
+	text-align: center;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+}
+.nowWokingBlock_mobile {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.attractInformFooterBold_Mobile{
+	display: inline-block;
+	padding: 0 20px;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+.point_mobile {
+	display: block;
+width: 10px;
+height: 10px;
+flex-shrink: 0;
+
+}
+.vkButtonLink_Mobile {
+	margin-bottom: 10px;
+}
+.vkButtonShape_Mobile {
+	width: 50px;
+	height: 50px;
+	flex-shrink: 0;
+}
+.AppStoreButtonLink_Mobile {
+	margin-bottom: 10px;
+}
+.AppStoreButtonShape_Mobile {
+	width: 180px;
+	height: 52.338px;
+	flex-shrink: 0;
+}
+.GPButtonLink_Mobile {
+	margin-bottom: 10px;
+}
+.GPButtonShape_Mobile {
+	width: 143.802px;
+	height: 41.87px;
+	transform: rotate(0deg);
+	flex-shrink: 0;
+}
+.copyrightText_mobile {
+	color: #000;
+font-family: 'Open Sans';
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 1%;
+}
+/*Конец Футер(подвал)*/
+
+/*Блок 3 Меню*/
+.Menu_section_3 {
+	padding: 0px;
+}
+.wrapper {
+}
+.section_zag{
+	font-size: 25px;
+}
+
+.alignMenuItems {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.MenuPoint {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	width: 20%;
+	
+}
+.MenuPointItem {
+	display: block;
+	
+	padding: 5px 5px;
+	cursor: pointer;
+}
+.MenuPointItem_Text {
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.MenuRightItemsAlign {
+	display: block;
+	width: 30%;
+	border-left: 1px solid #CCCCCC;
+}
+.MenuRightItemsAlign_Top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+}
+.MenuRightItemsAlign_Bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	margin-top: 50px;
+}
+.MenuRightItemsTip {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.MenuRightItem_Ico {
+	display: block;
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	align-self: center;
+}
+.MenuRightItem_Text {
+	display: block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	text-align: center;
+}
+/*Конец Блок 3 Меню*/
+
+ }
+ @media screen and (max-width:768px) {
+	/*Блок 3 Меню*/
+.Menu_section_3 {
+	padding: 0px;
+}
+.wrapper {
+}
+.section_zag{
+	font-size: 25px;
+}
+
+.alignMenuItems {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.MenuPoint {
+	display: block;
+	width: 30%;
+}
+.MenuPointItem {
+	display: block;
+	padding: 5px 5px;
+	cursor: pointer;
+}
+.MenuPointItem_Text {
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.MenuRightItemsAlign {
+	display: block;
+	width: 100%;
+	border-top: 1px solid #CCCCCC;
+	border-left:none;
+}
+.MenuRightItemsAlign_Top {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+}
+.MenuRightItemsAlign_Bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	margin-top: 5px;
+}
+.MenuRightItemsTip {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.MenuRightItem_Ico {
+	display: block;
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	align-self: center;
+}
+.MenuRightItem_Text {
+	display: block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	text-align: center;
+}
+/*Конец Блок 3 Меню*/
+
+/*Блок 4 Карта*/
+.section_zag{
+   
+}
+.ContactsMap_section_4 {
+	padding: 20px 0;
+	width: 100%;
+	background: #FAF9F8;
+}
+.addresAlignBlock {display: none;}
+.addresAlignBlock_mobile {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: auto;
+}
+.addresTextBlock {
+	/*display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;*/
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding-left: 5%;
+	margin-right: 5%;
+	align-items: center;
+	margin: auto;
+	
+}
+.addresMainPhrase {
+	color: #000;
+	font-family: 'Roboto';
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-right: 1%;
+}
+.addresHighlightPrase {
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	margin-right: 2%;
+	vertical-align: middle;
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+.addresUsualPhrase {
+	display: inline-block;
+	color: #000;
+	font-family: 'Open Sans';
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	vertical-align: middle;
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+.mapTextIco{
+	width: 30px;
+	height: 30px;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+.mapPlace {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	width: 95%;
+	height:50%;
+	position: relative;
+}
+.mapKarta {
+	border-radius: 15px;
+	background: rgba(217, 217, 217, 0.70);
+	filter: blur(0.8px) grayscale(80%);
+}
+.mapButton{
+	width: 150px;
+	height: 35px;
+	flex-shrink: 0;
+	border-radius: 15px;
+	border: 2px solid #4D4D4D;
+	background: #4D4D4D;
+	color: #FFF;
+	font-family: 'Open Sans';
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	position: absolute;
+	bottom: 20%;
+	left:30%;
+}
+.mapKarta:hover{
+	filter: none;
+}
+/*Конец блока 4*/
+
+/*Cуши*/
+/*страница суши*/
+
+.Section1_Sushi{
+	
+}
+.impCaption{
+   display: block;
+   width:100%;
+   margin-top: 20px;
+}
+.section_zag2{
+   display: inline-block;
+   width: 100%;
+   color: #000;
+   font-family: 'Roboto';
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+   text-align: center;
+   align-self: center;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+.CaptionChoice{
+   display: inline-block;
+   width: 30%;
+   color: #9F9F9F;
+   font-family: 'Roboto';
+   font-size: 17px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: normal;
+   align-self: center;
+   text-align: left;
+   padding-left: 20px;
+}
+.CaptionChoiceLink{
+
+}
+.captionItemsAlign{
+   display: block;
+   width:100%;
+   margin-top: 10px;
+}
+.captionItemsAlign_Row ul{
+   
+}
+.FirstButton{
+   margin-right:6%;
+}
+.AfterFirstButton{
+   margin-right:3%;
+}
+.AfterFirstButton:hover{
+   border-radius: 15px;
+   background: #9e9393;
+   padding: 10px 10px;
+   
+}
+.captionItemsAlign_Button{
+   display: block;
+   width: 100%;
+   text-align: center;
+   /*width: 25%;*/
+   align-items: center;
+   background: #FFF;
+   padding: 10px 10px;
+   
+}
+.TextMenuLink{
+   color: #4B3434;
+   font-family: 'Open Sans';
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+}
+.TextMenuLink:hover{
+   text-decoration: none;
+   color: white;
+}
+.Button_visited{
+   border-radius: 15px;
+   background: #4D4D4D;
+   padding: 10px 10px;
+}
+.Button_visited .TextMenuLink{
+   color: white;
+}
+
+.goodsBasketIco{
+   width: 39.8px;
+   height: 38.76px;
+}
+
+.goodsCard{
+   /*display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   width: 294px;
+   padding: 20px 0;*/
+   zoom:95%;
+}
+.gallery {
+   position: relative;
+   width: 100%;
+}
+.goodsCard_Top {
+   display: block;
+   overflow: hidden;
+   /*width: 294px;*/
+   width: 100%;
+
+   border-radius: 15px;
+   position: relative;
+}
+.goodsCard_addKart, .goodsCard_deleteKart{
+   width: 50px;
+height: 50px;
+flex-shrink: 0;
+}
+.goodsCard_addKart{
+   
+}
+.goodsCard_deleteKart{
+   
+}
+
+.goodsCard_counts{
+   position: absolute;
+  
+   width: 46px;
+   height: 50px;
+   flex-shrink: 0;
+   background: #36332E;
+   opacity: 80%;
+  border-radius: 5px;
+}
+.goodsCard_countsText{
+   text-align: center;
+ margin-top:20%;
+   color: rgba(255, 255, 255, 0.70);
+font-family: 'Roboto';
+font-size: 30px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.goodsCard__img {
+  
+}
+.goodsCard__img:hover{
+   
+}
+
+.goodsCard_Bottom {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   width: 100%;
+}
+.goodsCard_ProductName {
+   display: block;
+   width: 50%;
+   color: #000;
+   font-family: 'Open Sans';
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+.goodsCard_PriceInf {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   width: 40%;
+   align-items: left;
+   /*padding-right: 5%;*/
+   margin-top: 5%;
+}
+.goodsCard_Price, .goodsCard_MoneyChange {
+   color: #000;
+   font-family: 'Open Sans';
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   
+}
+.goodsCard_Price{
+   display: block;
+   width: 60%;
+   text-align: right;
+}
+.goodsCard_MoneyChange{
+   display: block;
+   width: 10%;
+   text-align: left;
+}
+
+.bodyGoodsSection_ForFlex{
+   padding-top: 50px;
+}
+.GoodsCardsSection_ColumnAlign{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+}
+.FlexGoodsCardsSection_RowAlign{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   width: 100%;
+}
+/*
+.goodsCardDeteilInformBottom{
+   display: none;
+   /*display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   width: 100%;
+}
+.goodsCard_ProductName_Trigger:hover{
+   background-color: rgb(187, 187, 223);
+   opacity: 50%;
+   border-radius: 5px;
+}
+.goodsCardDeteilInformBottom2{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   width: 100%;
+}*/
+.goodsCardDeteilInformBottom{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   width: 100%;
+}
+.goodsCardDeteilInformBottom_Text{
+   color: #BABABA;
+   font-family: 'Open Sans';
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+/*конец страница суши*/
+/*Пагинция*/
+.pagination_block {
+	display: none;
+}
+.pagination_block_mobile {
+	display: block;
+	margin:auto;
+	text-align: center;
+}
+.pageItem_mobile {
+	width: 150px;
+	height: 70px;
+	flex-shrink: 0;
+	border-radius: 10px;
+	background: #4D4D4D;
+	padding: 20px;
+}
+.pageItemText_mobile {
+	display:inline-block;
+	color: #FFF;
+	font-family: 'Open Sans';
+	font-size: 16.968px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	padding-right: 5px;
+}
+/*Конец пагинации*/
+/*конец Cуши*/
+ }
+

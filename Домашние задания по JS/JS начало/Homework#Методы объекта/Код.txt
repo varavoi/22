@@ -1,0 +1,118 @@
+/*Задание 1
+У нас есть объект, в котором хранятся зарплаты нашей команды:
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+Если объект salaries пуст, то результат должен быть 0.*/
+//Решение
+/*let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+}
+function isEmpty(object){
+  for(key in object){
+    return false;
+  }
+  return true;
+}
+
+function countSum(salaries){
+  let sum=0;
+  let text='Сумма зарплат';
+  if(isEmpty(salaries)){ sum=0; }
+  else{
+    text +="\n"
+    for(let key in salaries){
+        text += key +', '
+        sum +=Number(salaries[key])
+       }
+    text = text.slice(0, -2)
+     }
+  return `${text} = ${sum}`;
+}
+alert(countSum(salaries));*/
+
+
+/*Задание 2
+Создайте объект calculator (калькулятор) с тремя методами:
+read() (читать) запрашивает два значения и сохраняет их как свойства объекта с именами a и b.
+sum() (суммировать) возвращает сумму сохранённых значений.
+mul() (умножить) перемножает сохранённые значения и возвращает результат.*/
+//Решение
+ /*let calculator ={
+   a:0,
+   b:0,
+   read:function(){
+     a = Number(prompt("Введите первое число"))
+     if(isNaN(a)){
+       while(isNaN(a)){
+         a = Number(prompt("Введите первое число"))
+       }
+     }
+     b = Number(prompt("Введите второе число"))
+     if(isNaN(b)){
+       while(isNaN(b)){
+         b = Number(prompt("Введите первое число"))
+       }
+     }
+   },
+   sum:function(){
+     return `Сумма ${a} + ${b} = ${a+b}`
+   },
+   mul:function(){
+     return `Произведение ${a} x ${b} = ${a*b}`
+   },
+ }
+ calculator.read();
+alert(calculator.sum());
+alert(calculator.mul());*/
+
+
+
+/*
+* Задание 3
+Умножаем все числовые свойства на 2
+важность: 3
+Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+Например:
+// до вызова функции
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+multiplyNumeric(menu);
+
+// после вызова функции
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+};
+Обратите внимание, что multiplyNumeric не нужно ничего возвращать. Следует напрямую изменять объект.
+P.S. Используйте typeof для проверки, что значение свойства числовое.*/
+/*
+//Решение
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+function multiplyNumeric(menu){
+  for(let key in menu){
+    if(typeof(menu[key]) === 'number'){
+      menu[key] *=2;
+    }
+  }
+}
+console.log(`Объект \"menu\", до умножения на 2:\n`)
+console.log(menu)
+multiplyNumeric(menu);
+console.log(`Объект \"menu\", после умножения на 2:\n`)
+console.log(menu)*/

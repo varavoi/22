@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" method="get" class="formFirst" id ="formId">
+            <div class="block">
+                <label for="dateId" placeholder="dd.mm.yyyy">Birthday(дата рождения)</label>
+                <input type="date" name="date" id="dateId" placeholder="dd.mm.yyyy" class="razmer">
+            </div>
+            <div class="block">
+                <label for="fileID">Photo(Ваше фото)</label>
+                <input type="file" name="file" id ="fileID" class="razmer">
+            </div>
+            <div class="block">
+                <label for="emailID">E-mail(Ваш e-mail)</label>
+                <input type="email" name="email" id="emailID" placeholder="Enter your E-mail" class=" razmer">
+            </div>
+            <div class="block">
+                <label for="urlId">URL(Ваш url)</label>
+                <input type="url" name="url" id="urlId" placeholder="Enter URL" class=" razmer">
+            </div>
+            <div class="block">
+                <label for="passwordId">Password(Ваш пароль)</label>
+                <div class="passBlock">
+                    <input type="password" id="passwordId" placeholder="Enter your password" class=" razmer">
+                    <a href="#" class="password-control" onclick="return show_hide_password(this);">
+                        <img src="showPas.png" class = "passIco" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="block">
+                <label for="colorId">Favorite color(Ваш любимый цвет)</label>
+                <input type="color" name="color" id="colorId" >
+            </div>
+            
+            <div class="checkBlock">
+                <p id="labelCheck">Remind about your birthday?</p>
+                <input type="checkbox" id="checkBirthdayId" class="otstup">
+            </div>
+            <input type="button" id="resetId" value="Reset" class="otstup">
+            <input type="submit" id="submitId" class="otstup">
+        </form>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

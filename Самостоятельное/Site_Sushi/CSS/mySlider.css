@@ -1,0 +1,62 @@
+.my_slider_flexRow{
+    display: flex;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-self: center;
+}
+.my_slider_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 2000px;
+    overflow:hidden;
+}
+.Slider2_IMG_Capt{
+    position: absolute;
+    bottom: 5%;
+    left:3%;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 224px;
+}
+
+
+.gallery__btn_left, .gallery__btn_right {
+    position: absolute;
+    z-index: 2;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #BFCCB8;
+    transition: background-color .3s;
+    cursor: pointer;
+    
+}
+
+.gallery__btn_left:hover, .gallery__btn_right:hover {
+    background-color: rgb(73, 73, 73);
+    cursor: pointer;
+}
+
+.gallery__btn_left:active, .gallery__btn_right:active {
+   transform: scale(0.97);
+   cursor: pointer;
+}
+
+.gallery__btn_left{
+    top:30%;
+    left:1%;
+}
+
+.gallery__btn_right{
+    top:30%;
+    right:-5%;
+}

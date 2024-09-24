@@ -1,0 +1,65 @@
+/*Задание 1
+Обязателен ли "else"?
+Следующая функция возвращает true, если параметр age больше 18.
+В ином случае она запрашивает подтверждение через confirm и возвращает его результат:
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    // ...
+    return confirm('Родители разрешили?');
+  }
+}
+Будет ли эта функция работать как-то иначе, если убрать else?*/
+//Ответ
+/*Если убрать блок else, при значении age<18, будет выдавать значение undefined, так как логика при age<18 не будет прписана,
+при этом,если оставить данный блок else c телом confirm, в этом случае при
+age<18 предлагается подтверждение, при нажатии ок в котором, функция будет возращать значение true, а иначе false*/
+
+
+/*Задание 2
+Функция min(a, b)
+Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
+Пример вызовов:
+min(2, 5) выведет 2
+min(3, -1) выведет -1
+min(1, 1) выведет 1*/
+//Решение
+/*
+function min(a, b){
+  if(a<b){
+    return a
+  }
+  else{
+    return b
+  }
+}
+let twoNumbers = prompt(`Введите через пробел 2 числа, для вывода минимального из них`).split(" ")
+if(twoNumbers.length==2){
+  alert(`min(${twoNumbers[0]}, ${twoNumbers[1]}) - минимальное значение из них: ${min(twoNumbers[0], twoNumbers[1])}`)
+}
+else if(twoNumbers.length!=2){
+  while(twoNumbers.length!=2){
+    twoNumbers = prompt(`Неправильный ввод\nВведите через пробел только 2 числа, для вывода минимального из них`).split(" ")
+   if(twoNumbers.length==2){
+  alert(`min(${twoNumbers[0]}, ${twoNumbers[1]}) - минимальное значение из них: ${min(twoNumbers[0], twoNumbers[1])}`)
+    }
+  }
+}*/
+
+
+/*
+* Задание 3
+Напишите функцию, которая возводит заданное число в заданную степень. 
+Если степень не указана, то функция возводит число в квадрат. Если не задано число выводится ошибка*/
+/*
+function toDegree(number, degree=2){
+    if(!isNaN(number)){
+      return number**degree
+    }
+  else return false
+}
+
+let number = prompt("Введите число")
+let degree = prompt("Введите степень")
+alert(`Результат операции по возведении в степень ${number} ^ ${degree} : ${toDegree(number, degree)}`)*/

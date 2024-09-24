@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Заказ еды</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="CSS/sliderBanner.css">
+        <link rel="stylesheet" href="CSS/demo.css">
+        <link rel="stylesheet" type="text/css" href="CSS/demo.css" media="all" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Victor+Mono:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:wght@500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Victor+Mono:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/burgerMenu.css">
+        <link rel="stylesheet" href="CSS/enterLoginWindow.css">
+        <!--<link href="https://myfonts.ru/myfonts?fonts=vokiar" rel="stylesheet" type="text/css"/>-->
+        <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css " rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="CSS/goodsCard.css">
+        <script src="JS/SliderScriptBanner.js"></script>
+        
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+        <link rel="stylesheet" href="CSS/mySlider.css">
+        <link rel="stylesheet" href="CSS/basket_style.css">
+        <script src="JS/Slider2/Slider2_fslightbox.js"></script>       
+        
+    </head>
+    <body>
+       
+        <header>
+            <div class="wrapper">
+                <div class="outerAlignLayer_Row">
+                    <!--Кнопка меню-->
+                    
+                    <button href="#" class="header_menuButton">
+                        <img src="IMG/DesktopHeaderElems/MenuIco.png" alt="" class="menuButIco">
+                        <p class="menuButText">Меню</p>
+                    </button>
+                <!--Конец Кнопка меню-->
+                <!--Выбор города-->
+               
+                   <select class="cityGeo cityGeo_CityName">
+                    <i class="fa-solid fa-location-arrow fa-2xs" style="color: #010204;"></i>
+                            <option value="" class="cityGeo_CityName">
+                            <p>Санкт-Петербург</p>       
+                            <option value="" class="cityGeo_CityName"><p >Москва</p>
+                            </option>
+                            <option value="" class="cityGeo_CityName"><p >Сочи</p>
+                            </option>
+                            <option value="" class="cityGeo_CityName"><p >Рязань</p>
+                            </option>
+                    </select>
+                
+                <!--Конец Выбор города-->
+                 <!--Логотип и слоган-->
+                    <div class="logoLayer">
+                        <a class="logoLink" href="Index.html"><p class="logo">TASTE</p></a>
+                        <p class="slogan">Невероятно вкусная еда</p>
+                    </div>
+                <!--Конец Логотип и слоган-->
+                <!--Правый блок-->
+                
+                    
+                                <button class="searchButton"><img src="IMG/DesktopHeaderElems/SearchIco.png" alt="" class="searchIco"></button>
+                                <button class="accountButton"> <img src="IMG/DesktopHeaderElems/LoginIco.png" alt="" class="LoginIco"></button>
+                                <a class="BasketItems" href="#">
+                                    <img src="IMG/DesktopHeaderElems/BasketItemsIco.png" alt="" class="basketIco">
+                                    <p class="basketGoodsCount">0</p>
+                                    <p class="basketMoneyChange">Р</p>
+                                </a>
+                   
+                    <!--Конец Правый блок-->
+                </div>
+                <div class="outerAlignLayer_MobileVersion">
+                    <div class="logoLayer_Mobile">
+                        <a href="Index.html" class="logoLink"><p class="logo_Mobile">TASTE</p></a>
+                        <p class="slogan_Mobile">Невероятно вкусная еда</p>
+                    </div>
+                    <div class="MenuCityLoginBlock_Mobile">
+                        <button href="#" class="header_menuButton_Mobile">
+                            <img src="IMG/DesktopHeaderElems/MenuIco.png" alt="" class="menuButIco_Mobile">
+                        </button>
+                       <!-- <nav class="cityGeo_Mobile">
+                            <ul class="dropdown_Mobile">
+                                <li class="dropdown-top_Mobile">
+                                <a class="cityGeo_CityName_Mobile" href="#">
+                                    <img src="IMG/DesktopHeaderElems/CityGeoICO.png" alt="" class="cityGeo_Ico_Mobile">        
+                                    Санкт-Петербург
+                                    <img src="IMG/DesktopHeaderElems/CityChoiceIco.png" alt="" class="cityGeo_CityChoice_Mobile"></a>                      
+                                <ul class="dropdown-inside_Mobile">
+                                    <li><a href="/"><p class="cityGeo_CityName_Mobile">Москва</p>
+                                    </a></li>
+                                <li><a href="/"><p class="cityGeo_CityName_Mobile">Сочи</p>
+                                    </a></li>
+                                <li><a href="/"><p class="cityGeo_CityName_Mobile">Рязань</p>
+                                    </a></li>
+                                </ul>                      
+                                </li>
+                            </ul>
+                            </nav>-->
+
+                            <select name="" id="" class="cityGeo_Mobile cityGeo_CityName_Mobile">
+                                <i class="fa-solid fa-location-arrow fa-2xs" style="color: #010204;"></i>
+                                <option value="" class="cityGeo_CityName_Mobile">
+                                    <p>Санкт-Петербург</p>       
+                                    <option value="" class="cityGeo_CityName_Mobile"><p >Москва</p>
+                                    </option>
+                                    <option value="" class="cityGeo_CityName_Mobile"><p >Сочи</p>
+                                    </option>
+                                    <option value="" class="cityGeo_CityName_Mobile"><p >Рязань</p>
+                                    </option>
+                            </select>
+                         <button class="LoginIcoBut_Mobile"> <img src="IMG/DesktopHeaderElems/LoginIco.png" alt="" class="LoginIco_Mobile"></button>
+                    </div>
+                    <div class="searchBlock_Mobile">
+                        <input type="search" class="searchArea_Mobile" placeholder="Поиск..." name="" id="">
+                        <a href="#"><img src="IMG/DesktopHeaderElems/SearchIco.png" alt="" class="searchIco_Mobile"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+           <div class="wrapper">
+            <div class="parentBasketBlock">
+
+                <h1 class="sectionCapt">
+                    Корзина
+                </h1>
+                <p class="basketLittleText">
+                    На самовывоз действует скидка -10%. Данное предложение не суммируется с другими акциями и спец. предложениями.
+                </p>
+                <div class="chosenGoodsList">
+                <div class="lineHoriz"></div>
+                    <div class="GoodsInfoItem">
+                        <a href="" class="GoodsInfoItem_imgLink">
+                            <img src="IMG/SiteSushi_IMGs/img1.png" alt="" class="GoodsInfoItem_img">
+                        </a>
+                        <a href="" class="GoodsInfoItem_titleLink">
+                        САКЕ МАКИ
+                        </a>
+                        <div class="workTextBasket_block">
+                            <p class="firstAmount_Item workTextBasket">260</p><span class="workTextBasket_span">руб.</span>
+                        </div>
+                            
+                            <div class="countBlock">
+                                <p class="countText">1</p>
+                                <button class="increaseCount">
+                                    <img src="IMG/Novinki_section/addTovar.png" alt="" class="countButtImg">
+                                </button>
+                                <button class="decreaseCount">
+                                    <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="countButtImg">
+                                </button>
+                            </div>
+                            <div class="workTextBasket_block">
+                                 <p class="totalAmount_Item workTextBasket">260</p><span class="workTextBasket_span">руб.</span>
+                            </div>
+                            <button class="removeItemBasket">
+                                <img src="IMG/logWindow/closeWindowIco.png" alt="" class="removeButtIMG">
+                            </button>
+                    </div>
+                    <div class="GoodsInfoItem">
+                        <a href="" class="GoodsInfoItem_imgLink">
+                            <img src="IMG/SiteSushi_IMGs/img1.png" alt="" class="GoodsInfoItem_img">
+                        </a>
+                        <a href="" class="GoodsInfoItem_titleLink">
+                        САКЕ МАКИ
+                        </a>
+                        <div class="workTextBasket_block">
+                            <p class="firstAmount_Item workTextBasket">260</p><span class="workTextBasket_span">руб.</span>
+                        </div>
+                            
+                            <div class="countBlock">
+                                <p class="countText">1</p>
+                                <button class="increaseCount">
+                                    <img src="IMG/Novinki_section/addTovar.png" alt="" class="countButtImg">
+                                </button>
+                                <button class="decreaseCount">
+                                    <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="countButtImg">
+                                </button>
+                            </div>
+                            <div class="workTextBasket_block">
+                                 <p class="totalAmount_Item workTextBasket">260</p><span class="workTextBasket_span">руб.</span>
+                            </div>
+                            <button class="removeItemBasket">
+                                <img src="IMG/logWindow/closeWindowIco.png" alt="" class="removeButtIMG">
+                            </button>
+                    </div>
+                    <div class="lineHoriz"></div>
+                    <div class="totalBlock">
+                         <p class="TotalCapt">Итого:</p>
+                        <p class="totalAmount">0<span class="workTextBasket_span">руб.</span></p>
+                    </div>
+                </div>
+
+                <form method="get" action="#" class="basketContBlock">
+                    <div class="basketContBlock_row">
+                            <label for="chPayId2" class="basketContBlock_labelStyle align_bask">
+                                <input type="checkbox" class="contactCheckbox" id="chPayId2" name="paymentMethod" value="payByCardCurier"/>
+                                <span class="customCheckbox"></span>
+                                ДОСТАВКА</label>
+                                <label for="chPayId2" class="basketContBlock_labelStyle align_bask">
+                                    <input type="checkbox" class="contactCheckbox" id="chPayId2" name="paymentMethod" value="payByCardCurier"/>
+                                    <span class="customCheckbox"></span>
+                                    ЗАБРАТЬ ИЗ РЕСТОРАНА</label>
+                        
+                    </div>
+                    <div class="basketContBlock_row">
+                        <div class="basketContBlock_rowLeft">
+                            <h3 class="sectionCaptH3">КОНТАКТНЫЕ ДАННЫЕ:</h3>
+                            <div class="basketContBlock_leftInputBlock">
+                                <p class="basketBlock_labelStyle">Имя</p>
+                                <input type="text" class="basketBlock_inputStyle basketContBlock_name" placeholder="Введите имя...">
+                            </div>
+                            <div class="basketContBlock_leftInputBlock">
+                                <p class="basketBlock_labelStyle">Телефон</p>
+                                <input type="tel" class="basketBlock_inputStyle basketContBlock_phone" placeholder="+7(...) ...-..-..">
+                            </div>
+                            <div class="basketContBlock_leftInputBlock">
+                                <p class="basketBlock_labelStyle">E-mail</p>
+                                <input type="email" class="basketBlock_inputStyle basketContBlock_email" placeholder="Введите e-mail...">
+                            </div>
+                        </div>
+                        <div class="basketContBlock_rowRight">
+                            <h3 class="sectionCaptH3">ОПЛАТА:</h3>
+                            <div class="basketBlock_CheckBlock">
+                                <label for="chPayId1" class="basketContBlock_labelStyle">
+                                <input type="checkbox" checked="checked" class="contactCheckbox" id="chPayId1" name="paymentMethod" value="payByCard"/>
+                                <span class="customCheckbox"></span>
+                                ОПЛАТА КАРТОЙ НА САЙТЕ</label>
+                            </div>
+                            <div class="basketBlock_CheckBlock">
+                                <label for="chPayId2" class="basketContBlock_labelStyle align_bask">
+                                <input type="checkbox" class="contactCheckbox" id="chPayId2" name="paymentMethod" value="payByCardCurier"/>
+                                <span class="customCheckbox"></span>
+                                ОПЛАТА КАРТОЙ КУРЬЕРУ</label>
+                            </div>
+                            <div class="basketBlock_CheckBlock">
+                                <label for="chPayId3" class="basketContBlock_labelStyle">
+                                <input type="checkbox" class="contactCheckbox" id="chPayId3" name="paymentMethod" value="payByCount"/>
+                                <span class="customCheckbox"></span>
+                                ОПЛАТА ПО СЧЁТУ ДЛЯ ОРГАНИЗАЦИЙ И ИП</label>
+                            </div>
+                            <div class="basketBlock_CheckBlock">
+                                <label for="chPayId4" class="basketContBlock_labelStyle">
+                                <input type="checkbox" class="contactCheckbox" id="chPayId4" name="paymentMethod" value="payByCashCurier"/>
+                                <span class="customCheckbox"></span>
+                                НАЛИЧНЫМИ КУРЬЕРУ</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="basketContBlock_row">
+                        <div class="basketContBlock_rowLeft_mini">
+                            <h3 class="sectionCaptH3">АДРЕС ДОСТАВКИ:</h3>
+                            <div class="basketContBlock_leftInputBlock">
+                                <p class="basketBlock_labelStyle">Улица</p>
+                                <input type="text" class="basketBlock_inputStyle basketContBlock_name" placeholder="Укажите улицу...">
+                            </div>
+                            <div class="little_Row">
+                                <div class="basketContBlock_leftInputBlock_little">
+                                    <p class="basketBlock_labelStyle_little">Квартира</p>
+                                    <input type="text" class="basketBlock_inputStyle_little basketContBlock_name" >
+                                </div>
+                                <div class="basketContBlock_leftInputBlock_little">
+                                    <p class="basketBlock_labelStyle_little">Этаж</p>
+                                    <input type="text" class="basketBlock_inputStyle_little basketContBlock_name" >
+                                </div>
+                                <div class="basketContBlock_leftInputBlock_little">
+                                    <p class="basketBlock_labelStyle_little">Подъезд</p>
+                                    <input type="text" class="basketBlock_inputStyle_little basketContBlock_name" >
+                                </div>
+                            </div>
+
+                            <div class="little_Row">
+                                <div class="basketContBlock_leftInputBlock_little">
+                                    <p class="basketBlock_labelStyle_little">Домофон</p>
+                                    <select class="basketSelectSt">
+                                        <option class="basketOptionSt">Есть</option>
+                                        <option class="basketOptionSt">Отсутствует</option>
+                                    </select>
+                                </div>
+                                <div class="basketBlock_CheckBlock">
+                                    <label for="notRingDoorID" class="basketContBlock_labelStyle align_bask">
+                                    <input type="checkbox" class="contactCheckbox" id="notRingDoorID" name="paymentMethod" value="notRingDoor"/>
+                                    <span class="customCheckbox"></span>
+                                    Не звонить в домофон</label>
+                                </div>
+                            </div>
+                            <div class="little_Row">
+                                <div class="basketBlock_CheckBlock">
+                                    <label for="closeDateID" class="basketContBlock_labelStyle align_bask">
+                                    <input type="checkbox" class="contactCheckbox" id="closeDateID" name="closeDate" value="notRingDoor"/>
+                                    <span class="customCheckbox"></span>
+                                    НА БЛИЖАЙШЕЕ ВРЕМЯ</label>
+                                </div>
+                            </div>
+                            <div class="little_Row">
+                                <div class="basketBlock_CheckBlock">
+                                    <label for="dateBaskID" class="basketContBlock_labelStyle align_bask">
+                                    <input type="checkbox" class="contactCheckbox" id="dateBaskID" name="dateBask" value="notRingDoor"/>
+                                    <span class="customCheckbox"></span>
+                                    ДАТА</label>
+                                </div>
+                                <input type="date" class="basketBlock_inputStyle basketDateSt" placeholder="Выберите дату...">
+                            </div>
+                        </div>
+                        <div class="basketContBlock_rowRight">
+                            <h3 class="sectionCaptH3">УКАЖИТЕ АДРЕС НА КАРТЕ:</h3>
+                            <div style="position:relative;overflow:hidden;" class="basketMap">
+                                <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/profile?ll=30.314997%2C59.938784&utm_medium=mapframe&utm_source=maps&z=11" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты</a>
+                                <iframe src="https://yandex.ru/map-widget/v1/profile?ll=30.314997%2C59.938784&z=11" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                        </div>
+                    </div>
+                    <div class="basketContBlock_row">
+                        <div class="basketContBlock_rowLeft">
+                            <h3 class="sectionCaptH3">КОММЕНТАРИЙ К ЗАКАЗУ:</h3>
+                            <textarea name="basketComments" id="basketCommentsId" class="basketTxtAreaSt"></textarea>
+                            <div class="basketBlock_CheckBlock">
+                                <label for="agreeCheckID" class="basketContBlock_labelStyle align_bask justifyContSB">
+                                <input type="checkbox" class="contactCheckbox" id="agreeCheckID" name="agreeCheck" value="notRingDoor"/>
+                                <span class="customCheckbox"></span>
+                                <p class="agreeCheckText">Я ознакомлен с содержанием пользовательского соглашения и принимаю условия обработки персональных данных.</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="basketContBlock_rowRight2 ">
+                            <input type="submit" value="ОФОРМИТЬ" class="basketCheckout">
+                        </div>
+                        
+                    </div>
+                    <div class="lineHoriz2"></div>
+                    <p class="basketLittleText">
+                        * При заказе без звонка оператора Вам придет EMAIL-подтверждение.
+                    </p>
+                </form>
+            </div>
+           </div>
+            
+        </main>
+        <footer>
+            <div class="decorative_line"></div>
+            <div class="wrapper">
+                    <div class="footerBlock" id="fB1">
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Сделать заказ</h3>
+                            <p class="footerBlock_informText">+7 (812) 458-2-274</p>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Режим работы</h3>
+                            <p class="footerBlock_informText">Сейчас работаем</p>
+                            <p class="footerBlock_usualText">Пн-Вс: 10:00 - 05:00</p>
+                        </div>
+                        <div class="footerBlockSection">
+                        </div>
+                        <div class="footerBlockSection">
+                            <a href="#"><img src="IMG/DesktopFooterElems/VK_ICO.png" alt="" class="footer_SocSiteIco icoVk"></a>
+                        </div>
+                    </div>
+                    <div class="footerBlock" id="fB2">
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">О TASTE</h3>
+                            <a href="#" class="footerMenu_Button" id ="TASTEFirstButton">Акции</a>
+                            <a href="#" class="footerMenu_Button">Программа балов</a>
+                            <a href="#" class="footerMenu_Button">Франшиза с нами</a>
+                            <a href="#" class="footerMenu_Button">Связаться с нами</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Карьера</h3>
+                            <a href="#" class="footerMenu_Button">Вакансии</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">ПРАВОВАЯ ИНФОРМАЦИЯ</h3>
+                            <a href="#" class="footerMenu_Button">Соглашение об условии доставки</a>
+                            <a href="#" class="footerMenu_Button" id="PravInf_SecButt">Политика обработки персональных данных</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <a href="#"><img src="IMG/DesktopFooterElems/AppstoreDown_Ico.png" alt="" class="footer_UploadIco icoUpload1"></a>
+                            <a href="#"><img src="IMG/DesktopFooterElems/AppstoreDown_Ico.png" alt="" class="footer_UploadIco icoUpload2"></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="decorative_line">
+                <p class="copyrightText">@copyright by Avoian 2023. All rights protected.</p>
+            </div>
+            <div class="footer_mobile">
+                <div class="decorative_line_mobile"></div> 
+                <div class="footerBlockSection_Mobile">
+                    <p class="informTextFooter_Mobile">Сделать заказ</p>
+                    <p class="attractInformFooter_Mobile">+7 (812) 458-2-274</p>
+                </div>
+                <div class="footerBlockSection_Mobile">
+                    <a href="" class="textButtonFooter_Mobile">О TASTE</a>
+                    <a href="" class="textButtonFooter_Mobile">КАРЬЕРА</a>
+                    <a href="" class="textButtonFooter_Mobile">ПРАВОВАЯ ИНФОРМАЦИЯ</a>
+                </div>
+                <div class="footerBlockSection_Mobile">
+                    <p class="informTextFooter_Mobile_notBold">РЕЖИМ РАБОТЫ</p>
+                    <div class="nowWokingBlock_mobile">
+                        <img src="IMG/DesktopFooterElems/footerpoint.png" alt="" class="point_mobile">
+                        <p class="attractInformFooterBold_Mobile">Сейчас работаем</p>
+                    </div>
+                    <p class="informTextFooter_Mobile">Пн-Вс: 10:00 - 05:00</p>
+                </div>
+                <div class="footerBlockSection_Mobile">
+                    <a href="" class="vkButtonLink_Mobile">
+                        <img src="IMG/DesktopFooterElems/VK_ICO.png" alt="" class="vkButtonShape_Mobile">
+                    </a>
+                    <a href="" class="AppStoreButtonLink_Mobile">
+                        <img src="IMG/DesktopFooterElems/AppstoreDown_Ico.png" alt="" class="AppStoreButtonShape_Mobile">
+                    </a>
+                    <a href="" class="GPButtonLink_Mobile">
+                        <img src="IMG/DesktopFooterElems/GoogleplayDown_Ico.png" alt="" class="GPButtonShape_Mobile">
+                    </a>
+                </div>
+                <div class="decorative_line_mobile">
+                    <p class="copyrightText_mobile">@copyright by Avoian 2023. All rights protected.</p>
+                </div>
+            </div>
+        </footer>
+            
+        
+            <script src="JS/burgermenu.js"></script>  
+        <script src = "JS/enterForm.js"></script>
+        <script src = "JS/goodsCard.js"></script>
+        <script src="JS/mySlider.js"></script>
+        <script src = "JS/searchButt.js"></script>
+        <script src = "JS/Basket.js"></script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    background: #9f5ce2;
+}
+
+.razm {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    background: #9f5ce2;
+    border: none;
+    border-right:1px solid #9f5ce2 ;
+    border-left:1px solid #9f5ce2 ;
+    
+}
+.razm:hover{
+    cursor: pointer;
+    border-right:1px solid #6a08cd ;
+    border-left:1px solid #6a08cd ;
+    background: #ba8de7;
+}
+.razm:active{
+    cursor: pointer;
+    background: #431571;
+}
+.buttBlock{
+    display: flex;
+    flex-direction: column;
+}

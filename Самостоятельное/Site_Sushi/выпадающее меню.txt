@@ -1,0 +1,222 @@
+css:
+
+
+ul.dropdown li { position: relative; }
+
+ ul.dropdown,
+ ul.dropdown-inside {
+ list-style-type: none;
+ padding: 0;      
+ }
+
+ ul.dropdown-inside {
+ position: absolute;
+ left: -9999px;       
+ }
+
+ ul.dropdown li.dropdown-top {
+ display: inline;
+ float: left;
+ margin: 0 1px 0 0; 
+ }
+ ul.dropdown li.dropdown-top a { 
+ padding: 3px 10px 4px;
+ display: block;
+ }
+ ul.dropdown a.dropdown-top { background: #efefef; }
+ ul.dropdown a.dropdown-top:hover { padding: 2px 10px 5px; } 
+ ul.dropdown li.dropdown-top:hover .dropdown-inside {
+ display: block;
+ left: 0;      
+ }
+
+ ul.dropdown .dropdown-inside { background: #fff; } 
+ ul.dropdown .dropdown-inside a:hover { background: #efefef; } 
+
+
+-----------------------------------------
+
+
+html:
+
+
+<ul class="dropdown">
+
+
+
+ <li class="dropdown-top">
+
+ <a class="dropdown-top" href="#">Англия</a>
+
+ <ul class="dropdown-inside">
+ <li><a href="/">Лондон</a></li>
+ <li><a href="/">Ливерпуль</a></li>
+ <li><a href="/">Манчестер</a></li>
+ </ul>
+
+ </li>
+
+
+
+ <li class="dropdown-top">
+ <a class="dropdown-top" href="/">Америка</a>
+ <ul class="dropdown-inside">
+ <li><a href="/">Нью-Йорк</a></li>
+ <li><a href="/">Лос-Анжелес</a></li>
+ <li><a href="/">Чикаго</a></li>
+ <li><a href="/">Сан-Антонио</a></li>
+ </ul>
+ </li>
+
+ <li class="dropdown-top">
+ <a class="dropdown-top" href="#">Франция</a>
+ <ul class="dropdown-inside">
+ <li><a href="#">Париж</a></li>
+ <li><a href="#">Марсель</a></li>
+ <li><a href="#">Лион</a></li>
+ <li><a href="#">Тулуза</a></li>
+ </ul>
+ </li>
+
+
+
+</ul>
+
+
+----------------------------------------------------------------------------------
+
+
+position: relative - Положение элемента устанавливается относительно его исходного места
+
+list-style-type: none - Изменяет вид маркера для каждого элемента списка. Это свойство используется только в случае, когда значение list-style-image установлено как none. Маркеры различаются для маркированного списка (тег <ul>) и нумерованного (тег <ol>). none - Отменяет маркеры для списка.
+
+float: left - обтекание (задает местоположение меню)
+
+display - отображение элемента (inline, block...)
+
+
+ul.dropdown-inside {
+ position: absolute;
+ left: -9999px;
+ }
+Указывает, что элемент абсолютно позиционирован, при этом другие элементы отображаются на веб-странице словно абсолютно позиционированного элемента и нет. Положение элемента задается свойствами left, top, right и bottom, также на положение влияет значение свойства position родительского элемента. Так, если у родителя значение position установлено как static или родителя нет, то отсчет координат ведется от края окна браузера. Если у родителя значение position задано как fixed, relative или absolute, то отсчет координат ведется от края родительского элемента. (чтобы скрыть их за пределами страницы, когда они не активны, т.е. не наведен курсор на англия-франция-сша)
+
+hover - поведение ссылки (кнопки) при наведении курсора
+
+
+dropdown - все меню в целом
+
+dropdown-top - верхние элементы меню (Англия, США, Франция)
+
+dropdown-inside - элементы выпадающего списка (в данном случае города)
+
+ul.dropdown li.dropdown-top {
+ display: inline;
+ float: left;
+ margin: 0 1px 0 0;   - отступы кнопок (верх, справа 1px - расстояние между кнопками, низ, лево)
+ }
+
+
+ ul.dropdown li.dropdown-top a { 
+ padding: 3px 10px 4px; - размер верхних кнопок в обычном состоянии через отступы (верх, ширина, отступ снизу)
+ display: block;
+ }
+
+
+
+ ul.dropdown li.dropdown-top a { 
+ padding: 3px 10px 4px; - размер верхних кнопок в обычном состоянии через отступы (верх, ширина, отступ снизу)
+ display: block;
+ }
+
+
+
+ul.dropdown a.dropdown-top { background: #efefef; } - цвет верхних кнопок (англия, франция, сша)
+ ul.dropdown a.dropdown-top:hover { padding: 2px 10px 5px; } - размер верхних кнопок при наведении (верх, шир., низ)
+ ul.dropdown li.dropdown-top:hover .dropdown-inside {
+ display: block;
+ left: 0;              - отображать блоком, сдвиг влево на 0 пиксел, т.е. без сдвига
+ }
+
+ ul.dropdown .dropdown-inside { background: #fff; } - цвет подложки для выпадающих кнопок
+ ul.dropdown .dropdown-inside a:hover { background: #efefef; }  - цвет подл. для выпад. кнопки, на которую наведен курсор
+
+
+
+---------------
+----------------
+
+пишем в head:
+
+<style>
+ ul.menu li { 
+ position: relative; 
+ }
+
+ ul.menu, ul.menu-inside {
+ list-style-type: none;
+ padding: 0;
+ } - стиль меню (без маркеров и без отступов)
+
+ ul.menu-inside {
+ position: absolute;
+ left: -9999px;
+ } - позиция выпадающих кнопок
+
+ ul.menu li.menu-top {
+ display: inline;
+ float: left;
+ margin: 0 1px 0 0;
+ } - отображение основных кнопок (в линию, с обтеканием слева, с отступом 1px)
+
+ ul.menu li.menu-top a {
+ padding: 3px 10px 4px;
+ display: block;
+ } - отображение и отступ основных ссылок меню
+
+ ul.menu a.menu-top { background:#CC3399;} - цвет подложек основных кнопок
+ ul.menu a.menu-top:hover { padding: 2px 10px 5px; } - отступ при наведении курсора
+ ul.menu li.menu-top:hover .menu-inside {
+ display: block;
+ left: 0;
+ } - поведение выпадающих ссылок при наведении 
+
+ ul.menu .menu-inside { background: #fff; } - цвет подложек выпадающих кнопок
+ ul.menu .menu-inside a:hover { background: #efefef; } - цвет подложек выпадающих кнопок при наведении
+ </style>
+
+
+
+
+пишем в body:
+
+<ul class="menu">
+
+ <li class="menu-top">
+ <a class="menu-top" href="/">Товары</a>
+ <ul class="menu-inside">
+ <li><a href="/">Товар 1</a></li>
+ <li><a href="/">Товар 2</a></li>
+ <li><a href="/">Товар 3</a></li>
+ </ul>
+ </li>
+
+ <li class="menu-top">
+ <a class="menu-top" href="/">Услуги</a>
+ <ul class="menu-inside">
+ <li><a href="/">Услуга 1</a></li>
+ <li><a href="/">Услуга 2</a></li>
+ <li><a href="/">Услуга 3</a></li>
+ </ul>
+ </li>
+
+ <li class="menu-top">
+ <a class="menu-top" href="/">Акции</a>
+ <ul class="menu-inside">
+ <li><a href="/">Акция 1</a></li>
+ <li><a href="/">Акция 2</a></li>
+ <li><a href="/">Акция 3</a></li>
+ </ul>
+ </li>
+ 
+</ul>

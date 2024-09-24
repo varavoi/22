@@ -1,0 +1,370 @@
+/*Задание 1
+Создать массив «Список покупок». Каждый элемент массива
+является объектом, который содержит название продукта, необходимое количество и куплен или нет. Написать несколько функций для работы с таким массивом.
+1. Вывод всего списка на экран таким образом, чтобы сначала
+шли некупленные продукты, а потом – купленные.
+2. Добавление покупки в список. Учтите, что при добавлении
+покупки с уже существующим в списке продуктом, необходимо увеличивать количество в существующей покупке,
+а не добавлять новую.
+3. Покупка продукта. Функция принимает название продукта
+и отмечает его как купленный.*/
+/*
+let object1 = {
+  title:"Chocolate",
+  quantity:45,
+  isBuy:true,
+}
+let object2 = {
+  title:"banana",
+  quantity:20,
+  isBuy:false,
+}
+let object3 = {
+  title:"car",
+  quantity:5,
+  isBuy:false,
+}
+let object4 = {
+  title:"shampoo",
+  quantity:100,
+  isBuy:true,
+}
+let object5 = {
+  title:"cake",
+  quantity:4,
+  isBuy:false,
+}
+let array = [object1, object2, object3,object4,object5]*/
+
+/*1. Вывод всего списка на экран таким образом, чтобы сначала
+шли некупленные продукты, а потом – купленные.*/
+/*function showBuy(array){
+  let arr2=[]
+for(let i=0;i<array.length;i++){
+  if(!array[i].isBuy){
+    arr2.unshift(array[i]);
+  }
+}
+for(let i=0;i<array.length;i++){
+  if(array[i].isBuy){
+    arr2.push(array[i]);
+  }
+}
+let listBuy="";
+listBuy +="Список покупок\n"
+for(let i=0;i<array.length;i++){
+  listBuy +=`${i+1}-й товар) ${arr2[i].title}, количество - ${arr2[i].quantity}, статус покупки - ${arr2[i].isBuy}\n`
+}
+  return listBuy;
+}*/
+//let list1 = showBuy(array);
+//alert(list1)
+
+/*2. Добавление покупки в список. Учтите, что при добавлении
+покупки с уже существующим в списке продуктом, необходимо увеличивать количество в существующей покупке,
+*/
+/*let object5 = {
+  title:"cacao",
+  quantity:15,
+  isBuy:true,
+}
+console.log(array)
+function addProduct(array,object5){
+  let arr2 = array
+  arr2.length +=1;
+  arr2.push(object5);
+  array = arr2
+}
+addProduct(array,object5)
+console.log(array)*/
+
+/*3. Покупка продукта. Функция принимает название продукта
+и отмечает его как купленный.
+*/
+/*console.log(array)
+
+function buyProduct(title){
+  for(let item of array){
+    if(item.title===title){
+    item.isBuy = true;
+    }
+  }
+}
+buyProduct("cake");
+console.log(array)*/
+//Конец задания 1
+
+/*Задание 2
+Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за
+единицу товара. Написать следующие функции.
+1. Распечатка чека на экран.
+2. Подсчет общей суммы покупки.
+3. Получение самой дорогой покупки в чеке.
+4. Подсчет средней стоимости одного товара в чеке. */
+/*let product1 = {
+  title:"Chocolate",
+  quantity:20,
+  price:85,
+}
+let product2 = {
+  title:"banana",
+  quantity:9,
+  price:20,
+}
+let product3 = {
+  title:"cola",
+  quantity:5,
+   price:120,
+}
+let product4 = {
+  title:"shampoo",
+  quantity:100,
+  price:170,
+}
+let product5 = {
+  title:"cake",
+  quantity:4,
+   price:345,
+}
+ let buyList = [product1,product2,product3,product4,product5]
+ */
+ 
+// 1. Распечатка чека на экран.
+ /*function showCheck(arr){
+   let text ="Чек\n"
+   let sum=0;
+   for(let item of arr){
+     text +=`Товар ${item.title} - ${item.quantity}шт. х ${item.price}руб. = ${item.quantity*item.price}руб.\n`;
+     sum += item.quantity*item.price;
+   }
+   text += `Итого  ${sum}руб.`
+   return text;
+ }
+alert(showCheck(buyList))*/
+ 
+ //2. Подсчет общей суммы покупки.
+ /*function amountSum(arr){
+   let text =""
+   let sum=0;
+   for(let item of arr){
+     sum += item.quantity*item.price;
+   }
+   text += `Общая сумма покупки:  ${sum}руб.`
+   return text;
+ }
+alert(amountSum(buyList))*/
+ 
+ //3. Получение самой дорогой покупки в чеке.
+/*function maxPriceBuy(arr){
+   let max =0;
+   let maxElem={};
+   for(let item of arr){
+     if(item.price >max){
+       max=item.price
+     }
+   }
+   for(let item of arr){
+     if(item.price===max){
+       maxElem = item;
+     }
+   }
+   
+   return maxElem;
+ }
+
+console.log(`Самая дорогая покупка в чеке:\n\"${maxPriceBuy(buyList).title}\" со стоимостью ${maxPriceBuy(buyList).price * maxPriceBuy(buyList).quantity}руб.`)*/
+ 
+ 
+ //4. Подсчет средней стоимости одного товара в чеке.
+ /*
+function countCost(item){
+   let text =""
+   text +=`Товар ${item.title} - ${item.quantity}шт. х ${item.price}руб. = ${item.quantity*item.price}руб.\n`;
+   return text;
+ }
+function totalSum(arr){
+  sum =0; let text=""
+  for(let item of arr){
+    sum +=item.quantity * item.price;
+  }
+  text += `Итого  ${sum}руб.`
+   return text;
+}
+
+let checkText ="Чек\n"
+for(let i=0;i<buyList.length;i++){
+  checkText +=countCost(buyList[i])
+}
+checkText +=totalSum(buyList)
+alert(checkText)
+*/
+ //Конец задания 2
+
+/* Задание 3
+Создать массив css-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т.д.). Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля.
+Написать функцию, которая принимает массив стилей и
+текст, и выводит этот текст с помощью document.write() в тегах
+<p></p>, добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. */
+/*function showText(arr,text){
+  let tmpText=""
+  for(let itemArr of arr){
+      tmpText += itemArr.nameStyle + ":" + itemArr.valueStyle + ";" 
+  }
+  tmpText = tmpText.slice(0,-1);
+  //teg +="\""+ tmpText + "\">" + text +" </p>"
+  //console.log(teg)
+  document.write(`<p style="${tmpText}">${text}</p>`);// Что-то ничего не выводится с помощью document.write(), хотя все правильно написано
+  console.log(`<p style="${tmpText}">${text}</p>`)
+}
+
+let colorRed = {
+  nameStyle:"color",
+  valueStyle:"red",
+}
+let fontSize16={
+  nameStyle:"fontSize",
+  valueStyle:"16px",
+}
+let textAlignCenter = {
+  nameStyle:"textAlign",
+  valueStyle:"center",
+}
+let textUnderline = {
+   nameStyle:"textDecoration",
+   valueStyle:"underline",
+}
+let arrStyles = [colorRed,fontSize16,textAlignCenter,textUnderline]
+let text = "Я люблю программировать"
+showText(arrStyles,text);*/
+//Конец задания 3
+
+/*Задание 4
+Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и
+названия факультета, для которого она предназначена.
+Написать несколько функций для работы с ним.
+1. Вывод на экран всех аудиторий.
+2. Вывод на экран аудиторий для указанного факультета.
+3. Вывод на экран только тех аудиторий, которые подходят для
+переданной группы. Объект-группа состоит из названия,
+количества студентов и названия факультета.
+4. Функция сортировки аудиторий по количеству мест.
+5. Функция сортировки аудиторий по названию (по алфавиту).*/
+
+/*let classroom1 = {
+  nameRoom:"238",
+  countSit:15,
+  faculty:"chemistry",
+}
+let classroom2 = {
+  nameRoom:"320",
+  countSit:30,
+  faculty:"maths",
+}
+let classroom3 = {
+  nameRoom:"125",
+  countSit:90,
+  faculty:"philosophy",
+}
+let classroom4 = {
+  nameRoom:"45",
+  countSit:27,
+  faculty:"english",
+}
+let classroom5 = {
+  nameRoom:"260",
+  countSit:110,
+  faculty:"philosophy",
+}
+let classroom6 = {
+  nameRoom:"411",
+  countSit:17,
+  faculty:"chemistry",
+}
+let arrClassrooms = [classroom1,classroom2,classroom3,classroom4,classroom5,classroom6]*/
+//1. Вывод на экран всех аудиторий.
+/*function showAllRooms(arr){
+  let text ="Аудитории нашего университета:\n";
+  for(let item of arr){
+    text +=`Аудитория ${item.nameRoom}, с количеством посадочных мест - ${item.countSit}, для факультета ${item.faculty};\n`;
+  }
+  alert(text);
+}
+showAllRooms(arrClassrooms);*/
+
+//2. Вывод на экран аудиторий для указанного факультета.
+/*function getClassroom(fac){
+  let myFac={};let text ="";
+  for(let item of arrClassrooms){
+    if(item.faculty===fac){
+      myFac= item;
+    }
+  }
+  text +=`Аудитория ${myFac.nameRoom}, с количеством посадочных мест - ${myFac.countSit}, для факультета ${myFac.faculty};\n`;
+  alert(text);
+}
+let faculty = "english";
+getClassroom(faculty);*/
+
+//3. Вывод на экран только тех аудиторий, которые подходят для переданной группы. . Объект-группа состоит из названия,количества студентов и названия факультета. ,
+/*let groupA ={
+  nameGroup:"first",
+  countStudent:75,
+  nameFacult:"philosophy",
+}
+function findNeedRoom(group, arr){
+  let tempArr=[]; let groupInfo=`Для группы ${group.nameGroup}, учащиеся в факультете ${group.nameFacult}, с количеством студентов ${group.countStudent} человек\nПодходят следующие аудитории:\n`
+  for(let item of arr){
+    if(item.countSit>=group.countStudent && item.faculty===group.nameFacult){
+      tempArr.push(item);
+    }
+  }
+  for(let i of tempArr){
+    groupInfo += `Аудитория ${i.nameRoom}, с количеством посадочных мест - ${i.countSit}, для факультета ${i.faculty};\n`;
+  }
+  alert(groupInfo);
+}
+findNeedRoom(groupA,arrClassrooms);*/
+
+//4. Функция сортировки аудиторий по количеству мест.
+/*
+function showInfo(arr){
+  let text ="Отсортированный массив аудиторий по количеству мест в аудитории:\n";
+  for(let item of arr){
+    text +=`Аудитория ${item.nameRoom}, с количеством посадочных мест - ${item.countSit}, для факультета ${item.faculty};\n`;
+  }
+  alert(text);
+}
+function sortClassRoomsBySit(arr){
+  arr.sort(function(a,b){
+    return a.countSit-b.countSit;
+  })
+  return arr;
+}
+
+arrClassrooms = sortClassRoomsBySit(arrClassrooms);
+showInfo(arrClassrooms)*/
+
+//5. Функция сортировки аудиторий по названию (по алфавиту)
+/*function showInfo(arr){
+  let text ="Отсортированный массив аудиторий по названию (по алфавиту) аудитории:\n";
+  for(let item of arr){
+    text +=`Аудитория ${item.nameRoom}, с количеством посадочных мест - ${item.countSit}, для факультета ${item.faculty};\n`;
+  }
+  alert(text);
+}
+function sortClassRoomsBySit(arr){
+  arr.sort(function(a,b){
+   if (a.faculty > b.faculty) {
+    return 1;
+      }
+  if (a.faculty < b.faculty) {
+    return -1;
+      }
+  return 0;
+  })
+  return arr;
+}
+
+arrClassrooms = sortClassRoomsBySit(arrClassrooms);
+showInfo(arrClassrooms)*/
+//Конец задания 4

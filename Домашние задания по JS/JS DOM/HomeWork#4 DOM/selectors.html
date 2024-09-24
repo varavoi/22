@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+ <style>
+ div, p {
+ border: 1px solid navy;
+ display: inline-block;
+ height: 60px;
+ margin: 10px;
+ padding-top: 40px;
+ text-align: center;
+ width: 100px;
+ }
+ .c1 {
+ background: #eee;
+ }
+ button {
+ margin-left: 25px;
+ margin-top: 30px;
+ width: 90px;
+ }
+ </style>
+</head>
+<body>
+ <div id="d1" class="c1" name="n1">d1, c1, n1</div>
+ <div id="d2" class="c2" name="n1">d2, c2, n1</div>
+ <div id="d3" class="c1 c2">d3, c1 c2</div>
+ <p id="p1" class="c1">p1, c1</p>
+ <p id="p2" class="c2" name="n1">p2, c2, n1</p>
+ <br>
+ <button onclick="selD1()">id = d1</button>
+ <button onclick="selC1()">class = c1</button>
+ <button onclick="selC2()">class = c2</button>
+ <button onclick="selC1C2()">class = c1, c2</button>
+ <button onclick="selP()">tag = P</button>
+ <button onclick="selDiv()">tag = div</button>
+ <button onclick="selN1()">name = n1</button>
+ <button onclick="clr()">Clear</button>
+ <button onclick="addButton()">Add button</button>
+ <script>
+    function addButton(){
+        let butt = document.createElement('button')
+        butt.innerHTML="New button"
+        let bodyEl = document.querySelector('body')
+        bodyEl.appendChild(butt)
+    }
+    function delAddedButton(e){
+        let bodyEl = document.querySelector('body')
+        let el=false;
+        for(let elem of bodyEl.childNodes){
+        if(e.target==elem && elem.innerHTML=="New button"){
+                el=elem
+            }
+        }
+        bodyEl.removeChild(el)
+    }
+
+    document.addEventListener("click",delAddedButton)
+ function selD1() {
+ var elem = document.getElementById("d1");
+ elem.style.backgroundColor = "#cfc";
+ }
+ function selC1(color="red") {
+    let elems=document.querySelectorAll(".c1")
+    for(el of elems)
+    el.style.backgroundColor=color;
+ }
+ 
+ function selC2(color="green") {
+    let elems=document.querySelectorAll(".c2")
+    for(elem of elems)
+    elem.style.backgroundColor = color;
+ }
+ function selC1C2() {
+   let elems = document.getElementsByClassName("c1 c2")
+   for(elem of elems)
+    elem.style.backgroundColor = "yellow";
+ }
+ function selDiv() {
+    let elems=document.getElementsByTagName("div")
+    for(elem of elems)
+    elem.style.backgroundColor = "purple";
+ }
+ function selP() {
+ var elems =
+ document.getElementsByTagName("p");
+ for(elem of elems)
+ elem.style.backgroundColor = "#ccf";
+ }
+ function selN1() {
+ var elems =
+ document.getElementsByName("n1");
+ for(elem of elems)
+ elem.style.backgroundColor = "#bef";
+ }
+ function clr() {
+ var elems =
+ document.querySelectorAll("div,p");
+ for(elem of elems)
+ elem.style.backgroundColor = "#eee";
+ }
+ </script>
+</body>
+</html>

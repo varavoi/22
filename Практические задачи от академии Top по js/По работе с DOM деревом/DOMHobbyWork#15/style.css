@@ -1,0 +1,93 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150vh;
+}
+.parblock {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: rgb(136, 172, 172);
+    padding: 20px;
+}
+.articleBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-bottom: 1px solid rgb(164, 150, 150);
+    padding-bottom: 10px;
+}
+.zag {
+    font-size: 25px;
+     color: #000;
+     margin-bottom: 10px;
+}
+
+.article {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 5px;
+    border-bottom: 1px solid rgb(164, 150, 150);
+    padding-bottom: 10px;
+    min-height: 100px;
+}
+.commentBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-bottom: 1px solid rgb(164, 150, 150);
+    padding-bottom: 10px;
+}
+.zag2 {
+    font-size: 18px;
+    font-weight: 600;
+     color: #000;
+     margin-top: 10px;
+}
+.labName {
+    font-size: 18px;
+     color: #000;
+     margin-top: 15px;
+     margin-bottom: 5px;
+}
+.labCom {
+    font-size: 18px;
+     color: #000;
+     margin-top: 15px;
+     margin-bottom: 5px;
+}
+.textInput {
+    width: 50%;
+    height: 30px;
+}
+.commentInput{
+    width: 95%;
+    height: 200px;
+}
+.buttBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid rgb(164, 150, 150);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.buttonAdd {
+    width: 90%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+

@@ -1,0 +1,40 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.likeButt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width:200px;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+.likeButt:hover{
+    cursor: pointer;
+    background-color: rgb(240, 229, 213);
+}
+.likeButt:active{
+    cursor: pointer;
+    background-color: rgb(167, 149, 122);
+    transform: scale(0.99,0.99);
+}
+.likeIco {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.likeTitle {
+    display: block;
+    font-size: 30px;
+}
+.likeCounter {
+    display: block;
+    font-size: 30px;
+}

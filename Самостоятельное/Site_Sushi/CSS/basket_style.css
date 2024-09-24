@@ -1,0 +1,436 @@
+p{
+    margin: 0px;
+}
+.parentBasketBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    background-color: #E9E9E9;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+.sectionCapt{
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 179px;
+}
+.basketLittleText {
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.lineHoriz{
+    display: block;
+    border-bottom: 3px solid rgb(142, 142, 142);
+    margin: 20px 0px;
+}
+
+.chosenGoodsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+.GoodsInfoItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+.totalBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 30%;
+    margin: 10px 0px;
+    align-self: flex-end;
+}
+.GoodsInfoItem_imgLink {
+    width: 10%;
+}
+.GoodsInfoItem_img {
+    width: 100%;
+}
+.GoodsInfoItem_titleLink {
+    display: block;
+    width: 25%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-left: 15px;
+}
+ .totalAmount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-left: 15px;
+    margin-right: 5px;
+} 
+.TotalCapt{
+    display: block;
+    width: 25%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: left;
+    margin-left: 15px; 
+}
+
+.workTextBasket_block{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.workTextBasket {
+    display: block;
+    width: 50%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: right;
+    margin-right: 5px;
+}
+.workTextBasket_span{
+    display: block;
+    width: 50%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-left: 5px;
+}
+
+
+.firstAmount_Item {
+    text-align: right;
+}
+.countBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.countText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    color: #ffffff;
+    font-family: 'Open Sans';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    width: 46px;
+    height: 50px;
+    flex-shrink: 0;
+    background: #36332E;
+    opacity: 80%;
+   border-radius: 5px;
+}
+.increaseCount, .decreaseCount {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 2.5px;
+}
+.increaseCount:active{
+	transform: scale(0.97);
+}
+.decreaseCount:active{
+	transform: scale(0.97);
+}
+.countButtImg {
+}
+
+.totalAmount_Item {
+    text-align: right;
+}
+.removeItemBasket {
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+/*чекбоксы*/
+.contactCheckbox{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+.customCheckbox{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #7e9bbd;
+    border-radius: 4px;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+.customCheckbox::before{
+    content:'';
+    display:inline-block;
+    width: 20px;
+    height:20px;
+    background-image: url("../IMG/Basket/checkbox.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left:55%;
+    top:45%;
+    height: 100%;
+    transform: translate(-50%,-50%) scale(0);
+    margin-top: 1px;
+    transition: 0.2s ease-in;
+}
+
+.contactCheckbox:checked+.customCheckbox::before{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.basketBlock_CheckBlock{
+    margin: 15px 0px;
+}
+.basketContBlock_rowRight{
+    width: 40%;
+}
+
+.align_bask{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.basketContBlock_labelStyle{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-right: 10px;
+    align-items: center;
+}
+.basketBlock_labelStyle_little{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-right: 10px;
+    align-items: center;
+}
+.basketBlock_labelStyle_little:first-child{
+    justify-content: left;
+}
+.basketContBlock_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px;
+}
+.alignItems_FlexStart{
+    align-items: flex-start;
+}
+.basketContBlock_rowLeft{
+    width: 50%;
+    
+}
+.basketContBlock_rowLeft_mini{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.little_Row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.sectionCaptH3{
+    margin: 20px 0px;
+}
+.basketContBlock_leftInputBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0px;
+    align-items: center;
+}
+.basketContBlock_leftInputBlock:first-child{
+    justify-content: space-between;
+}
+.basketContBlock_leftInputBlock_little{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+    margin-right: 10px;
+    align-items: center;
+    width: 30%;
+}
+.basketContBlock_leftInputBlock_little:last-child{
+    justify-content: space-evenly;
+}
+.basketBlock_inputStyle{
+    border-radius: 20px;
+    padding: 10px;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-style: normal;
+    width: 100%;
+}
+.basketBlock_inputStyle_little{
+    border-radius: 20px;
+    padding: 10px;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-style: normal;
+    width: 70%;
+    text-align: center;
+    margin-right:40px;
+    min-width: 50px;
+}
+
+.basketBlock_labelStyle{
+    display: block;
+    width: 50%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-right: 10px;
+}
+.basketDateSt{
+    width: 60%;
+}
+.basketMap{
+    border-radius: 12px;
+}
+.basketSelectSt{
+    font-size: 20px;
+    border-radius: 12px;
+    display: flex;
+    text-align: center;
+    padding: 5px;
+}
+.basketOptionSt{
+    border-radius: 12px;
+}
+
+.basketCheckout{
+    align-self: center;
+    width: 225px;
+	height: 50px;
+	flex-shrink: 0;
+	border-radius: 15px;
+	border: 2px solid #4D4D4D;
+	background: #4D4D4D;
+	color: #FFF;
+	font-family: 'Open Sans';
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+.basketCheckout:hover{
+    cursor: pointer;
+    background: #adacac;
+}
+.basketCheckout:active{
+    cursor: pointer;
+    transform: scale(0.97);
+    background: #534c4c;
+}
+.justifyContCenter{
+    justify-content: center;
+}
+.justifyContSB{
+    justify-content: space-between;
+}
+.basketContBlock_rowRight2 {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+.basketTxtAreaSt{
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+}
+.agreeCheckText{
+    width: 90%;
+}
+.lineHoriz2{
+    display: block;
+    border-bottom: 1px solid rgb(142, 142, 142);
+    margin: 20px 0px;
+}

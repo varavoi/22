@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Заказ еды</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="CSS/sliderBanner.css">
+        <link rel="stylesheet" href="CSS/demo.css">
+        <link rel="stylesheet" type="text/css" href="CSS/demo.css" media="all" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Victor+Mono:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:wght@500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Victor+Mono:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/burgerMenu.css">
+        <link rel="stylesheet" href="CSS/enterLoginWindow.css">
+        <!--<link href="https://myfonts.ru/myfonts?fonts=vokiar" rel="stylesheet" type="text/css"/>-->
+        <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css " rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="CSS/goodsCard.css">
+        <script src="JS/SliderScriptBanner.js"></script>
+        
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+        <link rel="stylesheet" href="CSS/mySlider.css">
+        <script src="JS/Slider2/Slider2_fslightbox.js"></script>       
+        
+    </head>
+    <body>
+       
+        <header>
+            <div class="wrapper">
+                <div class="outerAlignLayer_Row">
+                    <!--Кнопка меню-->
+                    
+                    <button href="#" class="header_menuButton">
+                        <img src="IMG/DesktopHeaderElems/MenuIco.png" alt="" class="menuButIco">
+                        <p class="menuButText">Меню</p>
+                    </button>
+                <!--Конец Кнопка меню-->
+                <!--Выбор города-->
+               
+                   <select class="cityGeo cityGeo_CityName">
+                    <i class="fa-solid fa-location-arrow fa-2xs" style="color: #010204;"></i>
+                            <option value="" class="cityGeo_CityName">
+                            <p>Санкт-Петербург</p>       
+                            <option value="" class="cityGeo_CityName"><p >Москва</p>
+                            </option>
+                            <option value="" class="cityGeo_CityName"><p >Сочи</p>
+                            </option>
+                            <option value="" class="cityGeo_CityName"><p >Рязань</p>
+                            </option>
+                    </select>
+                
+                <!--Конец Выбор города-->
+                 <!--Логотип и слоган-->
+                    <div class="logoLayer">
+                        <a class="logoLink" href="Index.html"><p class="logo">TASTE</p></a>
+                        <p class="slogan">Невероятно вкусная еда</p>
+                    </div>
+                <!--Конец Логотип и слоган-->
+                <!--Правый блок-->
+                
+                    
+                                <button class="searchButton"><img src="IMG/DesktopHeaderElems/SearchIco.png" alt="" class="searchIco"></button>
+                                <button class="accountButton"> <img src="IMG/DesktopHeaderElems/LoginIco.png" alt="" class="LoginIco"></button>
+                                <a class="BasketItems" href="#">
+                                    <img src="IMG/DesktopHeaderElems/BasketItemsIco.png" alt="" class="basketIco">
+                                    <p class="basketGoodsCount">0</p>
+                                    <p class="basketMoneyChange">Р</p>
+                                </a>
+                                
+                    <!--Конец Правый блок-->
+                </div>
+                <div class="outerAlignLayer_MobileVersion">
+                    <div class="logoLayer_Mobile">
+                        <a href="Index.html" class="logoLink"><p class="logo_Mobile">TASTE</p></a>
+                        <p class="slogan_Mobile">Невероятно вкусная еда</p>
+                    </div>
+                    <div class="MenuCityLoginBlock_Mobile">
+                        <button href="#" class="header_menuButton_Mobile">
+                            <img src="IMG/DesktopHeaderElems/MenuIco.png" alt="" class="menuButIco_Mobile">
+                        </button>
+                       <!-- <nav class="cityGeo_Mobile">
+                            <ul class="dropdown_Mobile">
+                                <li class="dropdown-top_Mobile">
+                                <a class="cityGeo_CityName_Mobile" href="#">
+                                    <img src="IMG/DesktopHeaderElems/CityGeoICO.png" alt="" class="cityGeo_Ico_Mobile">        
+                                    Санкт-Петербург
+                                    <img src="IMG/DesktopHeaderElems/CityChoiceIco.png" alt="" class="cityGeo_CityChoice_Mobile"></a>                      
+                                <ul class="dropdown-inside_Mobile">
+                                    <li><a href="/"><p class="cityGeo_CityName_Mobile">Москва</p>
+                                    </a></li>
+                                <li><a href="/"><p class="cityGeo_CityName_Mobile">Сочи</p>
+                                    </a></li>
+                                <li><a href="/"><p class="cityGeo_CityName_Mobile">Рязань</p>
+                                    </a></li>
+                                </ul>                      
+                                </li>
+                            </ul>
+                            </nav>-->
+
+                            <select name="" id="" class="cityGeo_Mobile cityGeo_CityName_Mobile">
+                                <i class="fa-solid fa-location-arrow fa-2xs" style="color: #010204;"></i>
+                                <option value="" class="cityGeo_CityName_Mobile">
+                                    <p>Санкт-Петербург</p>       
+                                    <option value="" class="cityGeo_CityName_Mobile"><p >Москва</p>
+                                    </option>
+                                    <option value="" class="cityGeo_CityName_Mobile"><p >Сочи</p>
+                                    </option>
+                                    <option value="" class="cityGeo_CityName_Mobile"><p >Рязань</p>
+                                    </option>
+                            </select>
+                         <button class="LoginIcoBut_Mobile"> <img src="IMG/DesktopHeaderElems/LoginIco.png" alt="" class="LoginIco_Mobile"></button>
+                    </div>
+                    <div class="searchBlock_Mobile">
+                        <input type="search" class="searchArea_Mobile" placeholder="Поиск..." name="" id="">
+                        <a href="#"><img src="IMG/DesktopHeaderElems/SearchIco.png" alt="" class="searchIco_Mobile"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+           
+            <section class="Banner_section_1">
+                <section class="awSlider">
+                    <div class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target=".carousel" data-slide-to="0" class="active"></li>
+                        <li data-target=".carousel" data-slide-to="1"></li>
+                        <li data-target=".carousel" data-slide-to="2"></li>
+                      </ol>
+                  
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img src="IMG/Banner/Banner_1.png" class="img_Banner">
+                          <h1 class="bannerCapture">Салат “Летняя гармония” в TASTE</h1>
+                          <div class="Capturecaption">Новый салат от шеф повара 
+                            с невероятно вкусными овощами</div>
+                            <a href="#" class="but">
+                                <div class="btn">
+                                    <p class="btnText">Подробнее</p>
+                                </div>
+                            </a>
+                         
+                        </div>
+                        <div class="item">
+                          <img src="IMG/Banner/Banner_2.png" class="img_Banner">
+                          <h1 class="bannerCapture" id="captureWhite">Бургеры от шефа</h1>
+                          <div class="Capturecaption" id="captureWhite">Незабываемый вкус нового бургера</div>
+                          <a href="#" class="but">
+                            <div class="btn">
+                                <p class="btnText">Подробнее</p>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="item">
+                          <img src="IMG/Banner/Banner_3.png" class="img_Banner">
+                          <h1 class="bannerCapture">Вкусная пицца по рецепту итальянских поваров</h1>
+                          <div class="Capturecaption">Наслаждайся незабываемым вкусом итальянской пиццы</div>
+                          <a href="#" class="but">
+                            <div class="btn">
+                                <p class="btnText">Подробнее</p>
+                            </div>
+                        </a>
+                        </div>
+                      </div>
+                  
+                      <!-- Controls -->
+                      <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+                        <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                        <span class="sr-only">Geri</span>
+                      </a>
+                      <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+                        <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                        <span class="sr-only">İleri</span>
+                      </a>
+                    </div>
+                  </section>
+            </section>
+            <!--Вторая секция карусель-->
+            <section class="Slider_section_2">
+                <div class="wrapper">
+                    <div class="my_slider_flexRow">
+
+                        <button class="gallery__btn_left">
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 11L0.999995 6L6 0.999998" stroke="white" />
+                            </svg>
+                        </button>   
+                        <div class="my_slider_container">
+                                    <div class="goodsCard">
+                                        <div  class="goodsCard_Top" href="img/2.jpeg">
+                                            <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG1.png" alt="2"></a>
+                                            <p class="Slider2_IMG_Capt">Новинки</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="goodsCard">
+                                        <div  class="goodsCard_Top" href="img/2.jpeg">
+                                            <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG2.png" alt="2"></a>
+                                            <p class="Slider2_IMG_Capt">Роллы и суши</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goodsCard">
+                                        <div  class="goodsCard_Top" href="img/2.jpeg">
+                                            <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG3.png" alt="2"></a>
+                                            <p class="Slider2_IMG_Capt">Наборы и сеты</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goodsCard">
+                                        <div  class="goodsCard_Top" href="img/2.jpeg">
+                                            <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG4.png" alt="2"></a>
+                                            <p class="Slider2_IMG_Capt">Пицца</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goodsCard">
+                                        <div  class="goodsCard_Top" href="img/2.jpeg">
+                                            <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG5.png" alt="2"></a>
+                                            <p class="Slider2_IMG_Capt">Дессерты</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goodsCard">
+                                        <div  class="goodsCard_Top" href="img/2.jpeg">
+                                            <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG6.png" alt="2"></a>
+                                            <p class="Slider2_IMG_Capt">Ланчи</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="goodsCard">
+                                        <div  class="goodsCard_Top" href="img/2.jpeg">
+                                            <a href="#"><img class="goodsCard__img" src="IMG/Slider2/slider2_IMG7.png" alt="2"></a>
+                                            <p class="Slider2_IMG_Capt">Блины</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+
+                            <button class="gallery__btn_right">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 11L6.00001 6L1 0.999997" stroke="white" />
+                                </svg>
+                            </button>
+                            
+                            </div>
+                            </div>
+            </section>
+            <section class="Menu_section_3">
+                <div class="wrapper">
+                    <h2 class="section_zag">Меню</h2>
+                    <div class="alignMenuItems">
+                        <nav class="MenuPoint">
+                            <ul>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Новинки</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Пицца</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Горячие блюда</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Поке и боулы</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Детское меню</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Мороженое</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Топпинги</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="MenuPoint">
+                            <ul>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Роллы и суши</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Yami Case</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Пицца большая</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">WOK</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Напитки</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Мороженое</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Блины</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="MenuPoint">
+                            <ul>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Наборы и сеты</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Супы</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Салаты и закуски</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Завтраки</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Десерты</a></li>
+                                <li class="MenuPointItem"><a class="MenuPointItem_Text">Гарниры</a></li>
+                            </ul>
+                        </nav>
+                        <div class="MenuRightItemsAlign">
+                            <div class="MenuRightItemsAlign_Top">
+                                <div class="MenuRightItemsTip">
+                                    <img src="IMG/menuSection/newFoodico.png" alt="" class="MenuRightItem_Ico">
+                                    <p class="MenuRightItem_Text">Новое</p>
+                                </div>
+                                <div class="MenuRightItemsTip">
+                                    <img src="IMG/menuSection/spicyFoodico.png" alt="" class="MenuRightItem_Ico">
+                                    <p class="MenuRightItem_Text">Острое</p>
+                                </div>
+                            </div>
+                            <div class="MenuRightItemsAlign_Bottom">
+                                <div class="MenuRightItemsTip">
+                                    <img src="IMG/menuSection/vegitarianFoodico.png" alt="" class="MenuRightItem_Ico">
+                                    <p class="MenuRightItem_Text">Вегитарианское</p>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ContactsMap_section_4">
+                <div class="addresAlignBlock">
+                    <div class="addresTextBlock">
+                        <p class="addresMainPhrase">Давайте найдем Ваш адрес?</p>
+                        <br><br>
+                        <p class="addresHighlightPrase">Бесплатная доставка</p>
+                        <img src="IMG/FreeIco.png" alt="" class="mapTextIco">
+                        <p class="addresUsualPhrase">если заказ больше 500Р</p>
+                        <br>
+                        <p class="addresHighlightPrase">45 минут</p>
+                        <img src="IMG/TIMERICO.png" alt="" class="mapTextIco">
+                        <p class="addresUsualPhrase">в среднем привозим заказ</p>
+                        <br>
+                        <p class="addresHighlightPrase">Режим работы</p>
+                        <p class="addresUsualPhrase">Пн-Вс: 10:00 - 05:00</p>
+                    </div>
+                    <div class="mapPlace">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&utm_medium=mapframe&utm_source=maps&z=11" style="color:#eee;font-size:12px;position:absolute;top:14px;">Карта Санкт-Петербурга с улицами и номерами домов — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.315635%2C59.938951&z=11" width="637" height="435" frameborder="1" allowfullscreen="true" style="position:relative;" class="mapKarta"></iframe></div>
+                        <button class="mapButton">Указать адрес</button>
+                    </div>
+                </div>
+                <div class="addresAlignBlock_mobile">
+                    <div class="addresTextBlock">
+                        <p class="addresMainPhrase">Давайте найдем Ваш адрес?</p>
+                        
+                        <p class="addresHighlightPrase">Бесплатная доставка</p>
+                        <img src="IMG/FreeIco.png" alt="" class="mapTextIco">
+                        <p class="addresUsualPhrase">если заказ больше 500Р</p>
+                   
+                        <p class="addresHighlightPrase">45 минут</p>
+                        <img src="IMG/TIMERICO.png" alt="" class="mapTextIco">
+                        <p class="addresUsualPhrase">в среднем привозим заказ</p>
+                       
+                        <p class="addresHighlightPrase">Режим работы</p>
+                        <p class="addresUsualPhrase">Пн-Вс: 10:00 - 05:00</p>
+                    </div>
+                    <div class="mapPlace">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&utm_medium=mapframe&utm_source=maps&z=11" style="color:#eee;font-size:12px;position:absolute;top:14px;">Карта Санкт-Петербурга с улицами и номерами домов — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.315635%2C59.938951&z=11" width="650" height="120" frameborder="1" allowfullscreen="true" style="position:relative;" class="mapKarta"></iframe></div>
+                        <button class="mapButton">Указать адрес</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="Novinki_section_5">
+                <div class="wrapper">
+                    <div class="my_slider_flexRow">
+                        <button class="gallery__btn_left">
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 11L0.999995 6L6 0.999998" stroke="white" />
+                            </svg>
+                        </button>
+    
+                        <div class="my_slider_container">
+                            <div class="goodsCard">
+                                <div  class="goodsCard_Top" href="img/2.jpeg">
+                                    <a href="#"><img class="goodsCard__img" src="IMG/SiteSushi_IMGs/img1.png" alt="2"></a>
+                                    <button class="goodsCard_addKart"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_buttICO"></button>
+                                    <div class="goodsCard_counts">
+                                        <p class="goodsCard_countsText">1</p>
+                                    </div>
+                                   <button class="goodsCard_deleteKart"> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_buttICO"></button>
+                                </div>
+                            <a href="#" class="goodsCard_Bottom">
+                                <p class="goodsCard_ProductName">Суши Восточная</p>
+                                <div class="goodsCard_PriceInf">
+                                    <p class="goodsCard_Price">1190</p>
+                                    <p class="goodsCard_MoneyChange">₽</p>  
+                                    <div href="#" class = "goodsBasket"><img src="IMG/GoodsCardItem/basketGoods_free.png" alt="" class="goodsBasketIco"></div>
+                                </div>
+                            </a>
+                            <button class="goodsCard_BuyButt">В корзину</button>
+                        </div>
+    
+                        <div class="goodsCard">
+                            <div  class="goodsCard_Top" href="img/2.jpeg">
+                                <a href="#"><img class="goodsCard__img" src="IMG/SiteSushi_IMGs/img1.png" alt="2"></a>
+                                <button class="goodsCard_addKart"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_buttICO"></button>
+                                <div class="goodsCard_counts">
+                                    <p class="goodsCard_countsText">1</p>
+                                </div>
+                               <button class="goodsCard_deleteKart"> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_buttICO"></button>
+                            </div>
+                        <a href="#" class="goodsCard_Bottom">
+                            <p class="goodsCard_ProductName">Суши Восточная</p>
+                            <div class="goodsCard_PriceInf">
+                                <p class="goodsCard_Price">1190</p>
+                                <p class="goodsCard_MoneyChange">₽</p>  
+                                <div href="#" class = "goodsBasket"><img src="IMG/GoodsCardItem/basketGoods_free.png" alt="" class="goodsBasketIco"></div>
+                            </div>
+                        </a>
+                        <button class="goodsCard_BuyButt">В корзину</button>
+                    </div>
+                    
+                    <div class="goodsCard">
+                        <div  class="goodsCard_Top" href="img/2.jpeg">
+                            <a href="#"><img class="goodsCard__img" src="IMG/SiteSushi_IMGs/img1.png" alt="2"></a>
+                            <button class="goodsCard_addKart"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_buttICO"></button>
+                            <div class="goodsCard_counts">
+                                <p class="goodsCard_countsText">1</p>
+                            </div>
+                           <button class="goodsCard_deleteKart"> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_buttICO"></button>
+                        </div>
+                    <a href="#" class="goodsCard_Bottom">
+                        <p class="goodsCard_ProductName">Суши Восточная</p>
+                        <div class="goodsCard_PriceInf">
+                            <p class="goodsCard_Price">1190</p>
+                            <p class="goodsCard_MoneyChange">₽</p>  
+                            <div href="#" class = "goodsBasket"><img src="IMG/GoodsCardItem/basketGoods_free.png" alt="" class="goodsBasketIco"></div>
+                        </div>
+                    </a>
+                    <button class="goodsCard_BuyButt">В корзину</button>
+                </div>
+    
+                <div class="goodsCard">
+                    <div  class="goodsCard_Top" href="img/2.jpeg">
+                        <a href="#"><img class="goodsCard__img" src="IMG/SiteSushi_IMGs/img1.png" alt="2"></a>
+                        <button class="goodsCard_addKart"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_buttICO"></button>
+                        <div class="goodsCard_counts">
+                            <p class="goodsCard_countsText">1</p>
+                        </div>
+                       <button class="goodsCard_deleteKart"> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_buttICO"></button>
+                    </div>
+                <a href="#" class="goodsCard_Bottom">
+                    <p class="goodsCard_ProductName">Суши Восточная</p>
+                    <div class="goodsCard_PriceInf">
+                        <p class="goodsCard_Price">1190</p>
+                        <p class="goodsCard_MoneyChange">₽</p>  
+                        <div href="#" class = "goodsBasket"><img src="IMG/GoodsCardItem/basketGoods_free.png" alt="" class="goodsBasketIco"></div>
+                    </div>
+                </a>
+                <button class="goodsCard_BuyButt">В корзину</button>
+            </div>
+    
+            <div class="goodsCard">
+                <div  class="goodsCard_Top" href="img/2.jpeg">
+                    <a href="#"><img class="goodsCard__img" src="IMG/SiteSushi_IMGs/img1.png" alt="2"></a>
+                    <button class="goodsCard_addKart"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_buttICO"></button>
+                    <div class="goodsCard_counts">
+                        <p class="goodsCard_countsText">1</p>
+                    </div>
+                   <button class="goodsCard_deleteKart"> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_buttICO"></button>
+                </div>
+            <a href="#" class="goodsCard_Bottom">
+                <p class="goodsCard_ProductName">Суши Восточная</p>
+                <div class="goodsCard_PriceInf">
+                    <p class="goodsCard_Price">1190</p>
+                    <p class="goodsCard_MoneyChange">₽</p>  
+                    <div href="#" class = "goodsBasket"><img src="IMG/GoodsCardItem/basketGoods_free.png" alt="" class="goodsBasketIco"></div>
+                </div>
+            </a>
+            <button class="goodsCard_BuyButt">В корзину</button>
+        </div>
+    
+        <div class="goodsCard">
+            <div  class="goodsCard_Top" href="img/2.jpeg">
+                <a href="#"><img class="goodsCard__img" src="IMG/SiteSushi_IMGs/img1.png" alt="2"></a>
+                <button class="goodsCard_addKart"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_buttICO"></button>
+                <div class="goodsCard_counts">
+                    <p class="goodsCard_countsText">1</p>
+                </div>
+               <button class="goodsCard_deleteKart"> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_buttICO"></button>
+            </div>
+        <a href="#" class="goodsCard_Bottom">
+            <p class="goodsCard_ProductName">Суши Восточная</p>
+            <div class="goodsCard_PriceInf">
+                <p class="goodsCard_Price">1190</p>
+                <p class="goodsCard_MoneyChange">₽</p>  
+                <div href="#" class = "goodsBasket"><img src="IMG/GoodsCardItem/basketGoods_free.png" alt="" class="goodsBasketIco"></div>
+            </div>
+        </a>
+        <button class="goodsCard_BuyButt">В корзину</button>
+    </div>
+    
+    <div class="goodsCard">
+        <div  class="goodsCard_Top" href="img/2.jpeg">
+            <a href="#"><img class="goodsCard__img" src="IMG/SiteSushi_IMGs/img1.png" alt="2"></a>
+            <button class="goodsCard_addKart"><img src="IMG/Novinki_section/addTovar.png" alt="" class="goodsCard_buttICO"></button>
+            <div class="goodsCard_counts">
+                <p class="goodsCard_countsText">1</p>
+            </div>
+           <button class="goodsCard_deleteKart"> <img src="IMG/Novinki_section/deleteTovar.png" alt="" class="goodsCard_buttICO"></button>
+        </div>
+    <a href="#" class="goodsCard_Bottom">
+        <p class="goodsCard_ProductName">Суши Восточная</p>
+        <div class="goodsCard_PriceInf">
+            <p class="goodsCard_Price">1190</p>
+            <p class="goodsCard_MoneyChange">₽</p>  
+            <div href="#" class = "goodsBasket"><img src="IMG/GoodsCardItem/basketGoods_free.png" alt="" class="goodsBasketIco"></div>
+        </div>
+    </a>
+    <button class="goodsCard_BuyButt">В корзину</button>
+    </div>
+    
+                    </div>
+                    
+                    <button class="gallery__btn_right">
+                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 11L6.00001 6L1 0.999997" stroke="white" />
+                        </svg>
+                    </button>
+    
+                </div>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <div class="decorative_line"></div>
+            <div class="wrapper">
+                    <div class="footerBlock" id="fB1">
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Сделать заказ</h3>
+                            <p class="footerBlock_informText">+7 (812) 458-2-274</p>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Режим работы</h3>
+                            <p class="footerBlock_informText">Сейчас работаем</p>
+                            <p class="footerBlock_usualText">Пн-Вс: 10:00 - 05:00</p>
+                        </div>
+                        <div class="footerBlockSection">
+                        </div>
+                        <div class="footerBlockSection">
+                            <a href="#"><img src="IMG/DesktopFooterElems/VK_ICO.png" alt="" class="footer_SocSiteIco icoVk"></a>
+                        </div>
+                    </div>
+                    <div class="footerBlock" id="fB2">
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">О TASTE</h3>
+                            <a href="#" class="footerMenu_Button" id ="TASTEFirstButton">Акции</a>
+                            <a href="#" class="footerMenu_Button">Программа балов</a>
+                            <a href="#" class="footerMenu_Button">Франшиза с нами</a>
+                            <a href="#" class="footerMenu_Button">Связаться с нами</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">Карьера</h3>
+                            <a href="#" class="footerMenu_Button">Вакансии</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <h3 class="footerBlock_caption">ПРАВОВАЯ ИНФОРМАЦИЯ</h3>
+                            <a href="#" class="footerMenu_Button">Соглашение об условии доставки</a>
+                            <a href="#" class="footerMenu_Button" id="PravInf_SecButt">Политика обработки персональных данных</a>
+                        </div>
+                        <div class="footerBlockSection">
+                            <a href="#"><img src="IMG/DesktopFooterElems/AppstoreDown_Ico.png" alt="" class="footer_UploadIco icoUpload1"></a>
+                            <a href="#"><img src="IMG/DesktopFooterElems/AppstoreDown_Ico.png" alt="" class="footer_UploadIco icoUpload2"></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="decorative_line">
+                <p class="copyrightText">@copyright by Avoian 2023. All rights protected.</p>
+            </div>
+            <div class="footer_mobile">
+                <div class="decorative_line_mobile"></div> 
+                <div class="footerBlockSection_Mobile">
+                    <p class="informTextFooter_Mobile">Сделать заказ</p>
+                    <p class="attractInformFooter_Mobile">+7 (812) 458-2-274</p>
+                </div>
+                <div class="footerBlockSection_Mobile">
+                    <a href="" class="textButtonFooter_Mobile">О TASTE</a>
+                    <a href="" class="textButtonFooter_Mobile">КАРЬЕРА</a>
+                    <a href="" class="textButtonFooter_Mobile">ПРАВОВАЯ ИНФОРМАЦИЯ</a>
+                </div>
+                <div class="footerBlockSection_Mobile">
+                    <p class="informTextFooter_Mobile_notBold">РЕЖИМ РАБОТЫ</p>
+                    <div class="nowWokingBlock_mobile">
+                        <img src="IMG/DesktopFooterElems/footerpoint.png" alt="" class="point_mobile">
+                        <p class="attractInformFooterBold_Mobile">Сейчас работаем</p>
+                    </div>
+                    <p class="informTextFooter_Mobile">Пн-Вс: 10:00 - 05:00</p>
+                </div>
+                <div class="footerBlockSection_Mobile">
+                    <a href="" class="vkButtonLink_Mobile">
+                        <img src="IMG/DesktopFooterElems/VK_ICO.png" alt="" class="vkButtonShape_Mobile">
+                    </a>
+                    <a href="" class="AppStoreButtonLink_Mobile">
+                        <img src="IMG/DesktopFooterElems/AppstoreDown_Ico.png" alt="" class="AppStoreButtonShape_Mobile">
+                    </a>
+                    <a href="" class="GPButtonLink_Mobile">
+                        <img src="IMG/DesktopFooterElems/GoogleplayDown_Ico.png" alt="" class="GPButtonShape_Mobile">
+                    </a>
+                </div>
+                <div class="decorative_line_mobile">
+                    <p class="copyrightText_mobile">@copyright by Avoian 2023. All rights protected.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="JS/burgermenu.js"></script>  
+        <script src = "JS/enterForm.js"></script>
+        <script src = "JS/goodsCard.js"></script>
+        <script src="JS/mySlider.js"></script>
+        <script src = "JS/searchButt.js"></script>
+        <script src="JS/docEvents.js"></script>
+    </body>
+</html>

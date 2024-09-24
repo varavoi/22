@@ -1,0 +1,73 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+#form1{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: rgb(203, 176, 176);
+    padding: 20px;
+}
+.inputBlock{
+    width: 50%;
+    text-align: center;
+   padding: 10px 0px;
+}
+
+.inpAlignBlock{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.lab {
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.remBlock {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0px;
+}
+.lab2 {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.razm{
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+    width: 80%;
+}
+#remCheck {
+    width: 20px;
+    height: 20px;
+}
+.signButt {
+    padding: 10px;
+    font-size: 18px;
+}
+.forgBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: 15px 0px;
+}
+.forgPass {
+    color: blue;
+    text-decoration: underline;
+    font-size: 16px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Заказ еды</title>
+        <meta charset="utf-8">
+      
+        
+        
+        <link rel="stylesheet" href="CSS/basket_style.css">
+        
+    </head>
+    <body>
+       <input type="checkbox">
+       <input type="checkbox">
+        <div class="basketBlock_CheckBlock">
+            <label for="chPayId1" class="basketContBlock_labelStyle">
+            <input type="checkbox" checked="checked" class="contactCheckbox" id="chPayId1" name="paymentMethod" value="payByCard" />
+            <span class="customCheckbox"></span>
+            ОПЛАТА КАРТОЙ НА САЙТЕ</label>
+        </div>
+        <div class="basketBlock_CheckBlock">
+            <label for="chPayId2" class="basketContBlock_labelStyle">
+            <input type="checkbox" class="contactCheckbox" id="chPayId2" name="paymentMethod" value="payByCardCurier" />
+            <span class="customCheckbox"></span>
+            ОПЛАТА КАРТОЙ КУРЬЕРУ</label>
+        </div>
+        <div class="basketBlock_CheckBlock">
+            <label for="chPayId3" class="basketContBlock_labelStyle">
+            <input type="checkbox" class="contactCheckbox" id="chPayId3" name="paymentMethod" value="payByCount" />
+            <span class="customCheckbox"></span>
+            ОПЛАТА ПО СЧЁТУ ДЛЯ ОРГАНИЗАЦИЙ И ИП</label>
+        </div>
+            
+        <script src = "JS/Basket.js"></script>
+    </body>
+</html>

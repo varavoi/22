@@ -1,0 +1,46 @@
+//ДЗ Цикл for
+
+/*Задание 1
+Запросить у пользователя число и вывести все делители этого числа*/
+//Решение
+/*
+let number = Number(prompt("Введите число"))
+let i = 0;
+let strDividerCollection=`Делители числа ${number}:\n`;*/
+/*
+//с помощью while
+while(i<=number-1){
+  if(number%i==0){
+    strDividerCollection +=`${i}; `
+  }
+  i++;
+}
+strDividerCollection +=`${number}`*/
+
+//с помощью for
+/*
+for(i;i<=number-1;i++){
+  if(number%i==0){
+    strDividerCollection +=`${i}; `
+  }
+}
+strDividerCollection +=`${number}`*/
+
+
+
+/*Задание 2 вложенным циклом
+Вывести таблицу умножения для всех чисел от 2 до 9.
+Каждое число необходимо умножить на числа от 1 до 10*/
+/*
+let strOneCol="";
+let strAllCol="Таблица умножения\n---------------------------------------\n";
+for(let i =2; i<=9;i++){
+  strAllCol +="\n"
+  for(let j =1; j<=10;j++){
+    strOneCol +=`${i} x ${j} = ${i*j}\n`
+  }
+  strAllCol +=`${strOneCol}`
+  strAllCol +="\n---------------------------------------\n"
+  strOneCol="";
+}
+console.log(strAllCol)*/

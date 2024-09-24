@@ -1,0 +1,38 @@
+body{
+    margin: auto;
+}
+.wrapper {
+    margin: auto;
+    width: 70%;
+}
+.allign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(147, 246, 147);
+}
+.blockNews {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.captureNews {
+    display: block;
+    width: 40%;
+}
+.delButNews {
+    display: block;
+    width: 20%;
+    height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.textNew {
+    display: block;
+    width: 100%;
+}

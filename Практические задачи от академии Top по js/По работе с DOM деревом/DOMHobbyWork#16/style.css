@@ -1,0 +1,36 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.searchBlock {
+    display: flex;
+    flex-direction: column;
+}
+.mBlock{
+    display: flex;
+    flex-direction: column;
+}
+.searchArea {
+    height: 30px;
+    font-size: 25px;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+.helpText{
+    padding: 5px;
+    border: 1px solid rgb(232, 195, 195);
+    font-size: 20px;
+}
+.helpText:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+.helpText:active{
+    cursor: pointer;
+    background-color: rgb(95, 175, 232);
+}

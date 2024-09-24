@@ -1,0 +1,73 @@
+//Задача 1
+/*Сделать первый символ заглавным
+важность: 5
+Напишите функцию ucFirst(str), возвращающую строку str с заглавным первым символом. Например:
+ucFirst("вася") == "Вася";*/
+ /*function ucFirst(str){
+   let tmp = str.slice(1,str.length)
+   tmp = str[0].toUpperCase() + tmp;
+   str =tmp;
+   return str;
+ }
+console.log(ucFirst("геннадий"))*/
+
+//Задача 2
+/*Проверка на спам
+важность: 5
+Напишите функцию checkSpam(str), возвращающую true, если str содержит 'viagra' или 'XXX', а иначе false.
+Функция должна быть нечувствительна к регистру:
+checkSpam('buy ViAgRA now') == true
+checkSpam('free xxxxx') == true
+checkSpam("innocent rabbit") == false*/
+/*
+function checkSpam(str){
+  str=str.toLowerCase();
+  if(str.indexOf("viagra")>-1 || str.indexOf("xxx")>-1){
+    console.log("true\nВ этом сообщении - спам!!!")
+  }
+  else{
+    console.log("false\nВ этом сообщении нету спама!!!")
+  }
+}
+checkSpam('buy ViAgRA now')
+checkSpam('free xxxxx')
+checkSpam("innocent rabbit")*/
+
+//Задача 3
+/*У вас есть строка:
+let text = "How are you doing today?";
+Создать массив, каждый из элементов которого хранит в себе отдельное слово этой строки
+Например: 
+Arr[0]= How
+Arr[1] = are
+…
+ и тд*/
+
+/*function makeArrayFromString(str){
+  let arr = str.split(" ");
+  return arr;
+}
+
+let arr = makeArrayFromString("How are you doing today?");
+for(let i=0;i<arr.length;i++){
+  console.log(`Arr[${i}] = \"${arr[i]}\"`)
+}*/
+
+
+/*Задача 4
+Написать любую функцию, которая выполняется 4 раза с интервалом в 2 секунды. Вам понадобится setInterval*/
+/*
+function executeFourTimes() {
+  let counter = 0;
+
+  const intervalId = setInterval(() => {
+    counter++;
+    console.log(`Функция выполняется ${counter} раз`);
+
+    if (counter === 4) {
+      clearInterval(intervalId);
+    }
+  }, 2000);
+}
+
+executeFourTimes();*/

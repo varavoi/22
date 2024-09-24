@@ -1,0 +1,177 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;
+ charset=UTF-8">
+    <title>Registration form</title>
+    <style>
+        #regForm b {
+            display: inline-block;
+            padding-top: 5px;
+            width: 100px;
+        }
+
+        #regForm input[type="submit"] {
+            margin: 15px 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="GET" id="regForm" onsubmit="return checkForm()">
+        <b>First name:</b>
+        <input type="text" id="name1" name="name1" /><br />
+        <b>Last name:</b>
+        <input type="text" id="name2" name="name2" /><br />
+        <b>Login:</b>
+        <input type="text" id="login" name="login" /><br />
+        <b>Password:</b>
+        <input type="password" id="pas1" name="pass" /><br />
+        <b>Confirm password:</b>
+        <input type="password" id="pas2"/><br />
+        <b>Email:</b>
+        <input type="email" id="email" name="email" /><br />
+        <b>Phone number:</b>
+        <input type="phone" id="phone" name="phone" /><br />
+        <b>Code:</b>
+        <input type="number" id="code" name="code" /><br />
+        <b></b><label>
+            <input type="checkbox" id="accept" name="accept"/>
+            I accept the rules
+        </label><br />
+        <input type="submit" value="Register" />
+    </form>
+    <script>
+
+    
+        /*
+     // якоря        
+      ^ — началостроки, 
+      $ — конец строки
+
+     \d Любая цифра
+     \s Пробельный символ (пробел, табуляция, разрыв строки)
+     \w Символ, допустимый в слове (англ. word–symbol):
+         большая или маленькая буква, а также цифры или
+         подчеркивание
+     . (точка) Любой символ (кроме разрыва строки)
+     \D Не цифра
+     \S Не пробельный символ
+     \W Символ, не являющийся \w
+     \х He x-цифра (цифры и буквы ABCDEF)
+             
+     ? 0 или 1 раз
+    + 1 и более раз
+    * 0 и более раз
+    {2} ровно 2 повтора (число произвольное)
+    {2,} 2 и более повторов (число произвольное)
+    {2,7} от 2 до 7 повторов (числа произвольные)
+
+    //Флаги
+    i С этим флагом поиск не зависит от регистра: нет разницы между A и a (см. пример ниже).
+      g С этим флагом поиск ищет все совпадения, без него – только первое.
+    */
+ function setCookie(cName,cValue){
+    let date = new Date()
+    date.setTime(date.getTime()+(4*24*60*60*1000))
+    let expires = "expires=" + date.toUTCString()
+    document.cookie = cName+"="+cValue+"; "+expires+"; path=/"
+ }
+ function delCookie(cName,cValue){
+    let date = new Date()
+    date.setTime(date.getTime()+((-4)*24*60*60*1000))
+    let expires = "expires=" + date.toUTCString()
+    document.cookie = cName+"="+cValue+"; "+expires+"; path=/"
+ }
+ function getName(cName,cValue){
+    let arr = document.cookie.split('; ')
+    let cookObj={}
+    let res=""
+    for(let i =0;i<arr.length;i++){
+        let tmp = arr[i].split('=')
+        cookObj[tmp[0]] = tmp[1]
+    }
+    for(let key in cookObj){
+        if(key==cName && cookObj[key]==cValue){
+            res=cookObj[key]
+            alert(`Hello ${res}`)
+        }
+    }
+    let ans = confirm('Остаться в системе')
+    if(ans){setCookie(cName,cValue)}
+    else if(!ans){delCookie(cName,cValue)}
+ }
+
+    function checkForm(){
+        let name1 = document.getElementById("name1").value
+        let tst = /^[A-Z][a-z]+(-[A-Z][a-z]+)*$/;
+        if (!tst.test(name1)) {
+            alert("First name is incorrect");
+        }
+        
+        let surname = document.getElementById('name2').value;
+        tst = /^[A-Z][a-z]+([ -][A-Z][a-z]+)*$/;
+        if (!tst.test(surname)) {
+            alert("surname is incorrect");
+        }
+
+        let login = document.getElementById('login').value;
+        let tstLog = /^[A-Za-z_@]{3,16}([_@-][A-Za-z_@]{3,16})$/;
+        if (!tstLog.test(login)) {
+            alert("login is incorrect");
+        }
+        
+        
+        //проверка пароля
+        let pas1 = document.getElementById('pas1').value;
+        if(!/\d/.test(pas1)){
+            alert("password has not numbers");
+        }
+        if(!/[a-z]/.test(pas1)){
+            alert("password has not little letters");
+        }
+        if(!/[A-Z]/.test(pas1)){
+            alert("password has not big letters");
+        }
+        let pas2 = document.getElementById('pas2').value;
+        if (pas1!=pas2) {
+            alert("passwords don`t matches");
+            return false
+        }
+
+        // проверка имейла
+            let eMail =document.getElementById("email").value;
+        tst = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        if (!tst.test(eMail)) {
+            alert("eMail is incorrect");
+            return false;
+        }
+
+        // проверка телефона
+        let phone =document.getElementById('phone').value
+        tst = /^\+*7*8*\(*\s*\d{3}\s*\)*\d{3}\-*\s*\d{2}\-*\s*\d{2}$/
+        if (!tst.test(phone)) {
+            alert("phone is incorrect");
+            return false;
+        }
+        //проверка кода
+        let code = document.getElementById("code").value
+        if(/\D/.test(code)){
+            alert("code is incorrect");
+            return false;
+        }
+
+        let agree = document.getElementById("accept")
+        if(!agree.checked){
+            alert('You must accept with rules')
+            return false
+        }
+        getName('Name',name1)
+        return true;
+    }
+   
+    </script>
+</body>
+
+</html>

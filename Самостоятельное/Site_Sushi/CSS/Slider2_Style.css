@@ -1,0 +1,611 @@
+.Slider_section_2{
+    width: 100%;
+    margin-top: 20px;
+}
+.Slider_section_2 .wrapper{
+    width: 95%;
+    margin: auto;
+    padding: 0px;
+}
+.swiper-wrapper{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 0 15px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 294px;
+}
+.gallery {
+    position: relative;
+    width: 100%;
+}
+
+.gallery__link {
+    display: block;
+    overflow: hidden;
+    width: 294px;
+    height: 195px;
+    border-radius: 15px;
+}
+.gallery__link2 {
+    display: block;
+    overflow: hidden;
+    /*width: 294px;*/
+    width: 100%;
+    height: 195px;
+    border-radius: 15px;
+    position: relative;
+}
+.addKart, .deleteKart{
+ 
+}
+.addKart{
+  
+}
+.deleteKart{
+  
+}
+.addKart, .deleteKart{
+    width: 50px;
+height: 50px;
+flex-shrink: 0;
+}
+.addKart_butt{
+    position: absolute;
+    bottom: 8%;
+    right: 40%;
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    z-index: 50;
+}
+.addKart{
+    
+}
+.deleteKart_butt{
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+}
+.deleteKart{
+    
+}
+.counts{
+    position: absolute;
+    bottom: 8%;
+    right: 23%;
+    width: 46px;
+    height: 50px;
+    flex-shrink: 0;
+    background: #36332E;
+    opacity: 80%;
+   border-radius: 5px;
+}
+.countsText{
+    text-align: center;
+  margin-top:20%;
+    color: rgba(255, 255, 255, 0.70);
+font-family: 'Roboto';
+font-size: 30px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.gallery__img {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+.gallery__img:hover{
+    filter: none;
+}
+
+.gallery__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.gallery-pagination {
+    /* width: inherit; */
+    display: flex;
+    justify-content: center;
+}
+.Slider2_IMG_Capt{
+    position: absolute;
+    bottom: 5%;
+    left:3%;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 224px;
+}
+.gallery__btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    margin-top: -12.5px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #BFCCB8;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+.gallery__btn2 {
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    margin-top: -12.5px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #BFCCB8;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+
+.gallery__btn:hover {
+    background-color: #e8f8e0;
+    cursor: pointer;
+}
+
+.gallery__btn-prev {
+    left: -20px;
+}
+
+.gallery__btn-next {
+    right: -20px;
+}
+
+.swiper-button-disabled {
+    background-color: rgb(174, 174, 174);
+    cursor: default;
+}
+
+.swiper-pagination-total {
+    opacity: .6;
+}
+
+.Slider3_IMG_Down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.slider3_ProductName {
+    display: block;
+    width: 50%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.slider3_PriceInf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 30%;
+    align-items: left;
+}
+.slider3_Price, .slider3_MoneyChange {
+    display: block;
+    width: 60%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Novinki_section_5 .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width:1150px) {
+    .slider3_ProductName {
+        display: block;
+        width: 50%;
+        color: #000;
+        font-family: 'Open Sans';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .slider3_PriceInf {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 30%;
+        align-items: left;
+    }
+    .slider3_Price, .slider3_MoneyChange {
+        display: block;
+        width: 60%;
+        color: #000;
+        font-family: 'Open Sans';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+@media screen and (max-width:768px) {
+
+    .Slider_section_2{
+        width: 100%;
+        height: 150px;
+    }
+    .Slider_section_2 .wrapper{
+        width: 95%;
+        margin: auto;
+        padding: 0px;
+    }
+    .swiper-wrapper{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    
+    }
+    
+    .swiper-slide{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 294px;
+    }
+    .gallery {
+        position: relative;
+        width: 70%;
+        margin-left: 15%;
+        align-self: center;
+    }
+    
+    .gallery__link {
+        display: block;
+        overflow: hidden;
+        width: 180px;
+        height: 170px;
+    }
+    .gallery__link2 {
+        display: block;
+        overflow: hidden;
+        /*width: 294px;*/
+        width: 100%;
+        height: 170px;
+        border-radius: 15px;
+        position: relative;
+    }
+    .addKart, .deleteKart{
+        width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    }
+    .addKart_butt{
+        position: absolute;
+        bottom: 8%;
+        right: 70%;
+        width: 35px;
+        height: 35px;
+        flex-shrink: 0;
+        z-index: 50;
+    }
+    .addKart{
+        
+    }
+    .deleteKart_butt{
+        position: absolute;
+        bottom: 8%;
+        right: 40%;
+    }
+    .deleteKart{
+        
+    }
+    
+    .counts{
+        position: absolute;
+        bottom: 8%;
+        right: 55%;
+        width: 35px;
+        height: 35px;
+        flex-shrink: 0;
+        background: #36332E;
+        opacity: 80%;
+       border-radius: 5px;
+    }
+    .countsText{
+        text-align: center;
+      margin-top:20%;
+        color: rgba(255, 255, 255, 0.70);
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    }
+    .gallery__img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .gallery__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    
+    .gallery-pagination {
+        /* width: inherit; */
+        display: flex;
+        justify-content: center;
+    }
+    .Slider2_IMG_Capt{
+        position: absolute;
+        bottom: 10%;
+        left:3%;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: 224px;
+    }
+    .gallery__btn {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        margin-top: -12.5px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        background-color: #BFCCB8;
+        transition: background-color .3s;
+        cursor: pointer;
+    }
+    .gallery__btn2 {
+        position: absolute;
+        z-index: 2;
+        top: 30%;
+        margin-top: -12.5px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        background-color: #BFCCB8;
+        transition: background-color .3s;
+        cursor: pointer;
+    }
+    
+    .gallery__btn:hover {
+        background-color: rgb(73, 73, 73);
+    }
+    
+    .gallery__btn-prev {
+        left: -20px;
+    }
+    
+    .gallery__btn-next {
+        right: -20px;
+    }
+    
+    .swiper-button-disabled {
+        background-color: rgb(174, 174, 174);
+        cursor: default;
+    }
+    
+    .swiper-pagination-total {
+        opacity: .6;
+    }
+    
+    .Slider3_IMG_Down {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .slider3_ProductName {
+        display: block;
+        width: 50%;
+        color: #000;
+        font-family: 'Open Sans';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .slider3_PriceInf {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 30%;
+        align-items: left;
+    }
+    .slider3_Price, .slider3_MoneyChange {
+        display: block;
+        width: 60%;
+        color: #000;
+        font-family: 'Open Sans';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+    .Novinki_section_5 .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width:639px) {
+    .gallery__link2 {
+        display: block;
+        overflow: hidden;
+        /*width: 294px;*/
+       /* width: 100%;*/
+       width: 250px;
+        
+        border-radius: 15px;
+        position: relative;
+    } 
+    .Slider3_IMG_Down {
+        width: 250px;
+    }
+}
+@media screen and (max-width:460px) {
+    .Slider_section_2{
+        width: 100%;
+        height: 130px;
+    }
+	.addKart, .deleteKart{
+        width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    }
+    .addKart{
+        position: absolute;
+        bottom: 20%;
+        right: 80%;
+    }
+    .deleteKart{
+        position: absolute;
+        bottom: 20%;
+        right: 40%;
+    }
+    
+    .counts{
+        position: absolute;
+        bottom: 20%;
+        right: 60%;
+        width: 35px;
+        height: 35px;
+        flex-shrink: 0;
+        background: #36332E;
+        opacity: 80%;
+       border-radius: 5px;
+    }
+    .countsText{
+        text-align: center;
+      margin-top:20%;
+        color: rgba(255, 255, 255, 0.70);
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    }
+    .gallery__link {
+        display: block;
+        overflow: hidden;
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+    }
+    .gallery__link2 {
+        display: block;
+        overflow: hidden;
+        /*width: 294px;*/
+       /* width: 100%;*/
+       width: 150px;
+        height: 120px;
+        border-radius: 15px;
+        position: relative;
+    } 
+    .Slider3_IMG_Down {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        text-align: center;
+    }
+    .slider3_ProductName {
+        display: block;
+        width: 100%;
+        color: #000;
+        font-family: 'Open Sans';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .slider3_PriceInf {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+    .slider3_Price, .slider3_MoneyChange {
+        display: inline;
+        text-align: center;
+        color: #000;
+        font-family: 'Open Sans';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .gallery{
+        margin-left: 10%;
+    }
+    
+    .addKart{
+        bottom: 5%;
+        right: 60%;
+    }
+    .deleteKart{
+        bottom: 5%;
+        right: 10%;
+    }
+    .counts{
+        bottom: 5%;
+        right: 35%;
+    }
+    .Slider2_IMG_Capt{
+        bottom: 15%;
+    }
+}

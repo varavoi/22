@@ -1,0 +1,52 @@
+//Задание 1
+/*Получить средний возраст
+важность: 4
+Напишите функцию getAverageAge(users), которая принимает массив объектов со свойством age и возвращает средний возраст.
+Формула вычисления среднего арифметического значения: (age1 + age2 + ... + ageN) / N.*/
+//Решение
+/*let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+let arr=[vasya,petya,masha]
+
+function showGetAverageInfo(users){
+let namesText="";let agesText=""; 
+  for(let i=0; i<users.length-1;i++){
+    namesText +=`${users[i].name}, `;
+    agesText +=`${users[i].age} + `;
+  }
+  namesText += `${users[users.length-1].name}`;
+  agesText += `${users[users.length-1].age}`;
+  return `Средний возраст людей:\n${namesText} =>(${agesText}) / ${users.length}`;
+}
+
+function getAverageAge(users){
+  let i=0;let sum=0;
+  for(i of users){
+    sum +=i.age;
+  }
+  let res = `${showGetAverageInfo(users)} = ${sum/users.length}`
+  return res;
+}
+alert(getAverageAge(arr))*/
+
+//Задание 2
+/*Напишите функцию sumInput(), которая:
+Просит пользователя ввести значения, используя prompt и сохраняет их в массив.
+Заканчивает запрашивать значения, когда пользователь введёт не числовое значение, пустую строку или нажмёт «Отмена».
+Подсчитывает и возвращает сумму элементов массива.
+P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».*/
+/*
+function sumInput(){
+  let array=[];let sum=0;
+  while(true){
+    let number = prompt("Введите число: ");
+    if(isNaN(Number(number)) || number==="" || number==null){break;}
+    else{array.push(Number(number));}
+  }
+  for(let i=0;i<array.length;i++){
+    sum += array[i];
+  }
+  return sum;
+}
+alert(`Сумма введенных числел = ${sumInput()}`);*/

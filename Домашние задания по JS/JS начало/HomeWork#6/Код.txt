@@ -1,0 +1,46 @@
+
+
+/*
+Задание 1. Напишите программу, которая считает факториал числа
+*/
+//Решение
+/*let i =1;
+let result =1;
+let number = Number(prompt("Расчет факториала числа\nВведите число"))
+if(isNaN(number)){
+  while(isNaN(number)){
+    number = Number(prompt("Расчет факториала числа\nНеправильный ввод\nВведите число"))
+  }
+}
+while(i<number+1){
+  result *=i;
+  i++
+}
+alert(`Результат вычисления\nФакториал ${number}! = ${result}`)*/
+
+
+
+/*
+Задание 2. Напишите программу, которая выводит все четные числа от 0 до введенного пользователем числа
+*/
+//Решение
+/*
+let number = Number(prompt("Введите число"))
+let accumulator=""
+let i=0;
+
+if(isNaN(number)){
+  while(isNaN(number)){
+    number = Number(prompt("Неправильный ввод\nВведите число"))
+  }
+}
+
+while(i<number+1){
+  if(i%2==0){
+    console.log(i%2)
+    accumulator +=`${i} `
+  }
+  i++;
+}
+alert(`Вывод всех четных чисел, от 0 до числа ${number}:\n${accumulator}`)
+*/

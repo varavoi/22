@@ -1,0 +1,75 @@
+/*Создать класс User, который имеет
+- поле, которое хранит в себе имя пользователя
+- поле, которое хранит в себе возраст пользователя
+- с помощью конструктора заполняет эти поля
+- имеет метод вывода информации о пользователе 
+
+Создать класс Guest,  который наследуются от user
+ Guest:
+- имеет собственное свойство lastIP, который хранит в себе IP-адрес
+- имеет приватное свойство #lastLogin, которое при создании экземпляра класса сохраняет в себе текущее время
+*имеет геттеры и сеттеры для этого поля
+*переопределяет родительский метод вывода информации, добавляя (super) в него вывод #lastLogin и lastIP*/
+
+class User{
+ #name=""; #age = 0; #job=""; #address="";
+  constructor(name,age){
+    this.#name = name;
+    this.#age=age;
+  }
+  set job(job){
+    this.#job=job;
+  }
+   set address(address){
+    this.#address= address;
+  }
+  get name(){
+    return this.#name;
+  }
+  get age(){
+    return this.#age;
+  }
+  get job(){
+  return this.#job;
+  }
+  get address(){
+    return this.#address;
+  }
+  getAnceta(){
+    /*console.log(`Пользователь - ${this.name}\nВозраст - ${this.age}\nПол - ${this.sex}\nДолжность - ${this.job}\nАдрес - ${this.address}`);*/
+    return `Пользователь - ${this.name}\nВозраст - ${this.age}\nПол - ${this.sex}\nДолжность - ${this.job}\nАдрес - ${this.address}`
+  }
+  
+}
+
+class Guest extends User{
+  #lastLogin =""; #lastIP = "";time=null;
+  constructor(name,age,lastLogin,lastIP){
+    super(name,age);
+    this.#lastLogin = lastLogin;
+    this.#lastIP = lastIP;
+    this.time = new Date(Date.now());
+    console.log(`Пользователь ${this.name} создан в ${this.time.getHours()}:${this.time.getMinutes()}:${this.time.getSeconds()}`)
+  }
+  get lastLogin(){
+    return this.#lastLogin;
+  }
+  get lastIP(){
+    return this.#lastIP;
+  }
+  getAnceta(){
+    let str=super.getAnceta();
+    str +=`\nЛогин - ${this.lastLogin}\nip адрес - ${this.lastIP}`
+    return str;
+    //console.log(`\nЛогин - ${this.lastLogin}\nip адрес - ${this.lastIP}`)
+  }
+  show(){
+    console.log(this.getAnceta())
+  }
+}
+
+
+let ivan = new Guest("Иван",20,"ivan99","i4560");
+ivan.job = "Инженер";
+ivan.address = "Садовая 28"
+ivan.show();

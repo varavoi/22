@@ -1,0 +1,174 @@
+body{
+    position: relative;
+}
+.loginWindow {
+    position: absolute;
+    width: 425px;
+    top:16%;
+    right: 18%;
+    border-radius: 30px;
+    background: #dfd7d7;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    border: 1px solid #c5bebe66;
+    z-index: 50;
+}
+.loginWindow_ColsElemsForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 80%;
+}
+.loginWindow_Row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.loginWindow_name {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.closeButton {
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.closeButton:hover {
+    border: 1px solid #746a6a66;
+    background-color: #ffffff;
+    cursor: pointer !important;
+}
+.closeButton:active {
+   transform: scale(0.97);
+    cursor: pointer;
+}
+.loginWindow_CloseIco {
+    width: 30px;
+    height: 30px;
+}
+.loginWindow_inputStyle {
+    width: 373px;
+    padding: 5px;
+    border: 1px solid rgba(81, 81, 81, 0.4);
+    border-radius: 8px;
+    background: rgb(252, 252, 252);
+    color: rgb(183, 183, 183);
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.loginWindow_link {
+    color: rgb(0, 0, 0);
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.loginWindow_link:hover{
+    text-decoration: none;
+    cursor: pointer;
+    outline: none !important;
+}
+.loginWindow_link:active{
+    text-decoration: none;
+    cursor: pointer;
+    outline: none !important;
+}
+.loginWindow_link:visited{
+    text-decoration: none;
+    outline: none !important;
+}
+.loginWindow_Button {
+    width: 373px;
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
+    border: 1px solid rgba(81, 81, 81, 0.4);
+    border-radius: 8px;
+    background: rgb(77, 77, 77);
+    padding: 10px 0px;
+}
+.loginWindow_Button:hover {
+    /* background: #8f8e8e; */
+    transform: scale(1.03);
+    cursor: pointer !important;
+}
+.loginWindow_Button:active {
+    background: #8f8e8e;
+    cursor:pointer;
+    transform: scale(0.97);
+}
+.loginWindow_socNetButt {
+    border:none;
+    border-radius: 50px;
+    padding: 5px;
+    margin: 0px 10px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginWindow_socNetButt:hover{
+    transform: scale(1.03);
+}
+.loginWindow_socNetButt:active{
+    transform: scale(0.97);
+}
+.loginWindow_socNetICO {
+   filter: invert(85%);
+}
+.loginWindow_registButt {
+    width: 373px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    background: rgb(252, 252, 252);
+    color: #000000;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding: 10px 0px;
+}
+.loginWindow_registButt:hover{
+    transform: scale(1.05);
+}
+
+.loginWindow_registButt:active{
+    transform: scale(0.97);
+    cursor: pointer;
+}
+.jc_spaceBetween{
+    justify-content: space-between;
+}
+.jc_spaceEvenly{
+    justify-content: space-evenly;
+}
+.jc_center{
+    justify-content: center;
+}
+.marginVert10px{
+    margin: 5px 0px;
+}

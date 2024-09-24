@@ -1,0 +1,188 @@
+/*Задание 1. С помощью prompt создайте меню из 4х пунктов
+1...
+2.
+3.
+4.*/
+//Решение
+/*const arrMenu=[]
+let strMenu=""
+alert("Создаем меню\nЗадавайте 4 пункта меню")
+let i=1;
+while(i<=4){
+  let menuItem = prompt(`Введите ${i}-й элемент меню`)
+  arrMenu.push(menuItem)
+  i++
+}
+for(let j=0; j<arrMenu.length;j++){
+  //console.log(`${j+1}.${arrMenu[j]}`)
+  strMenu +=`${j+1}.${arrMenu[j]}\n`
+}
+alert(`Созданное Вами меню:\n${strMenu}`)*/
+
+
+/*Задание 2   С помощью switch обработайте результаты.
+Пример - калькулятор
+2 Prompt для двух чисел
+1. Сложение
+2. Вычитание
+3. ...
+Вывод результата*/
+//Решение
+/*
+function operTwoNumbers(strNum, operNum){
+  let arrayOfNums = strNum.split(" ");
+  let number1= Number(arrayOfNums[0]);
+  let number2= Number(arrayOfNums[1]);
+  let resultOper;
+  let operator="";
+  switch(operNum){
+    case 1:
+      resultOper =number1+number2;
+      operator="+";
+      break;
+    case 2:
+       resultOper =number1-number2;
+       operator="-";
+        break;
+  case 3:
+        resultOper =number1*number2;
+        operator="x";
+        break;
+  case 4:
+        resultOper =number1/number2;
+        operator="/";
+        break;
+  case 5:
+        resultOper =number1**number2;
+        operator="^";
+        break;
+      }
+  return `Результат\n${number1} ${operator} ${number2} = ${resultOper}`;
+}
+
+function inputTwoNumbers(){
+  let strMenu ="Программа Калькулятор\n1. Сложение\n2. Вычитание\n3. Умножение\n4. Деление \n5. Возведение в степень\n"
+  let strNumbers = prompt(`Калькулятор\n\nОперации над числами\n${strMenu}\nВведите 2 числа через пробел`)
+  let arrayOfNums = strNumbers.split(" ");
+  let number1= Number(arrayOfNums[0]);
+  let number2= Number(arrayOfNums[1]);
+if(isNaN(number1) || isNaN(number2)){
+  while(isNaN(number1) || isNaN(number2)){
+     strNumbers = prompt(`Калькулятор\n\nОперации над числами\n${strMenu}\nНеправильный ввод\nВведите 2 числа через пробел`)
+     arrayOfNums = strNumbers.split(" ");
+     number1= Number(arrayOfNums[0]);
+     number2= Number(arrayOfNums[1]);
+    }
+  }
+  return strNumbers;
+}
+
+function inputOperator(){
+  let strMenu ="Программа Калькулятор\n1. Сложение\n2. Вычитание\n3. Умножение\n4. Деление \n5. Возведение в степень\n"
+  let operatorNumber =Number(prompt(`Калькулятор\n\nОперации над числами\n${strMenu}\nВведите номер операции`))
+  if(isNaN(operatorNumber) || operatorNumber<1 || operatorNumber>5){
+  while(isNaN(operatorNumber) || operatorNumber<1 || operatorNumber>5){
+    operatorNumber =Number(prompt(`Калькулятор\n\nОперации над числами\n${strMenu}\nНеправильный ввод\nВведите номер операции`))
+    }
+  }
+  return operatorNumber;
+}
+
+function calculator(){
+  while(true){
+    let strNumbers = inputTwoNumbers();
+    let operatorNumber = inputOperator();
+    alert(operTwoNumbers(strNumbers, operatorNumber));
+    let continueCount = confirm("Хотите продолжить подсчет?")
+    if(!continueCount){
+      break;
+    }
+  }
+}
+calculator();*/
+
+/*Задание 3. Составьте программу, которая
+проходит проверку при значениях переменной «х» из диапазона 0–9 (0 не входит, 9 входит в диапазон) и выводит соответствующее сообщение
+выводит ошибку при значении 0
+во всех остальных случаях не проходит проверку
+
+(например,х=3 —
+истина, х=9 — истина, х=–1 — ложь, х=10 — ложь, х=0 - ошибка).*/
+//Решение
+/*
+let x = prompt("Введите цифры \"x\"")
+if(isNaN(x) || x==""){
+  while(isNaN(x) || x==""){
+    x=prompt("Неправильный ввод\nВведите цифры\"x\"")
+    if(x>0 && x<=9){alert(`х = ${x} : истина`)}
+    else if(x==0){alert(`х = ${x} : ошибка`)}
+    else{alert(`х = ${x} : ложь`)}
+  }
+}
+
+else if(!isNaN(x)){
+  if(x>0 && x<=9){alert(`х = ${x} : истина`)}
+  else if(x==0){alert(`х = ${x} : ошибка`)}
+  else{alert(`х = ${x} : ложь`)}
+}*/
+
+/*
+Задание 4. Напишите программу, которая просит пользователя ввести пароль. Если пароль не совпадает (заранее определите правильный пароль в программе), то выводится ошибка. 
+*Выводите ошибку до тех пор, пока не будет введен правильный пароль
+*/
+//1-ое решение(легкий вариант)
+/*
+let password1 = "1234"
+let password2 = "Web"
+let password3 = "012Cat"
+let pass = prompt("Введите пароль")
+if(pass==password1 || pass==password2 || pass==password3){
+  alert("Поздравляем\nВы ввели правильный пароль")
+}
+else{
+  while(pass!=password1 || pass!=password2 || pass!=password3){
+    pass = prompt("Неправильный ввод\nВведите правильный пароль")
+      if(pass==password1 || pass==password2 || pass==password3){
+        alert("Поздравляем\nВы ввели правильный пароль")
+        break;
+      }
+  }
+}*/
+//2-ое решение(средний вариант)
+/*
+function checkLogin(pass, arrayPasswords){
+  let isLogined;
+   for(let i=0; i<arrayPasswords.length;i++){
+    if(arrayPasswords[i]==pass){
+      isLogined=true;
+      break
+    }
+  }
+  return isLogined;
+}
+
+function checkEnter(pass, arrayPasswords){
+    if(!checkLogin(pass, arrayPasswords)){
+      while(!checkLogin(pass, arrayPasswords)){
+        pass = prompt("Вход в систему\nНеправильный пароль\nПовторите попытку!!!\n");
+          if(checkLogin(pass, arrayPasswords)){
+            alert("Поздравляем\nВы ввели правильный пароль\nВы успешно вошли в систему\n")
+              }
+           }
+        }
+    else{
+      alert("Вы ввели неправильный пароль\nПовторите попытку\n")
+        }
+}
+
+//Выполнение
+let amountOfPasswords = Number(prompt("Регистрация паролей\nВведите количество паролей, которые Вы хотите зарегистрировать в базе данных\n"))
+const arrayPasswords=[];
+for(let i=0; i<amountOfPasswords;i++){
+  arrayPasswords[i]=prompt(`Регистрация паролей\n${i+1}-й пароль`)
+}
+alert("Ваши пароли успешно зарегистрировались в базе данных\n")
+let pass = prompt("Вход в систему\nДля входа в систему введите Ваш пароль!!!\n")
+checkEnter(pass, arrayPasswords);*/
+
+

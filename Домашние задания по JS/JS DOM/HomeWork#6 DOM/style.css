@@ -1,0 +1,32 @@
+body{
+    margin: auto;
+}
+.wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    
+    padding: 15%;
+}
+.buttonReg{
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-family: serif;
+    background: lime;
+    color: black;
+    font-weight: 500;
+    margin: 10px;
+}
+.buttonReg:hover{
+    background: yellow;
+} 
+.buttonReg:active{
+    background: green;
+}
+
+
